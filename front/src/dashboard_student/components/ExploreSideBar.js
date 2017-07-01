@@ -15,40 +15,46 @@ import Image from 'grommet/components/Image';
 export class ExploreSidebar extends Component {
 
   render() {
+
+    const imageFeed = require('../../static/img/feed.svg');
     const imageFace = require('../../static/img/facw.svg');
     const allCourses = require('../../static/img/all.svg');
     const imageVoice = require('../../static/img/voice.svg');
     const imageFinances = require('../../static/img/finances.svg');
     const imageTech = require('../../static/img/tech.svg');
+      const imageContent = require('../../static/img/content.svg');
+    const imageCancel = require('../../static/img/cancel.svg');
     return (
       <Sidebar colorIndex='neutral-4' fixed={true} size='medium'>
         <Header pad='medium' justify='between'>
           <Title className="title-dash">
-            MB
+
           </Title>
         </Header>
         <Box className="box-profile-nav " flex='grow' justify='start'>
           <Image className="img-title" src={imageFace} size="small"/>
           <h3>
-            CATEGORIES
+            Felipe
           </h3>
 
           <Menu primary={true}>
-            <Anchor href='#' className='active'>
-              <Image className="menu-img" src={allCourses}/>
-              AllCourses
+            <Anchor href='/dashboard/student/profile' className='active'>
+              <Image className="menu-img" src={imageFace}/>
+              Perfil
             </Anchor>
-            <Anchor href='#'>
-              <Image className="menu-img img-margin" src={imageVoice} />
-              Language
+            <Anchor href='/dashboard/student_explore'>
+              <Image className="menu-img" src={imageFeed}/>
+            Estatus
             </Anchor>
-            <Anchor href='#'>
-              <Image className="menu-img" src={imageFinances}/>
-              Finances
+        
+            <Anchor href='/dashboard/student/course'>
+              <Image className="menu-img img-margin" src={imageContent}/>
+              Dietas
             </Anchor>
-            <Anchor href='#'>
-              <Image className="menu-img img-margin" src={imageTech}/>
-              Tech
+
+            <Anchor href='/'>
+              <Image className="menu-img img-margin" src={imageCancel}/>
+              Logout
             </Anchor>
           </Menu>
         </Box>

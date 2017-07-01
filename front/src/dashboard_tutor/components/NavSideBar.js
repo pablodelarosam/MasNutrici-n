@@ -11,6 +11,8 @@ import CloseIcon from 'grommet/components/icons/base/Close';
 import Anchor from 'grommet/components/Anchor';
 import Box from 'grommet/components/Box';
 import Image from 'grommet/components/Image';
+import Section from 'grommet/components/Section';
+
 
 export class NavSidebar extends Component {
 
@@ -24,44 +26,37 @@ export class NavSidebar extends Component {
     const imageFeed = require('../../static/img/feed.svg');
 
     return (
-      <Sidebar colorIndex='neutral-4' fixed={true} size='medium'>
+
+      <Sidebar className="sideBarDoctor" colorIndex='neutral-4' fixed={true} size='medium'>
         <Header pad='medium' justify='between'>
           <Title className="title-dash">
-            MB
+
           </Title>
         </Header>
         <Box className="box-profile-nav " flex='grow' justify='start'>
           <Image className="img-title" src={imageFace} size="small"/>
           <h3>
-            Felipe
+            Dr.Luis
           </h3>
           <p>
             Navigation
           </p>
           <Menu primary={true}>
-            <Anchor href='/dashboard/tutor/profile' className='active'>
+            <Anchor href='/dashboard/tutor/newsfeed' className='active'>
               <Image className="menu-img" src={imageFace}/>
-              Profile
+            Pacientes
             </Anchor>
-            <Anchor href='/dashboard/tutor/newsfeed'>
+            <Anchor href='/dashboard/tutor/profile'>
               <Image className="menu-img" src={imageFeed}/>
               NewsFeed
             </Anchor>
-            <Anchor href='/dashboard/tutor/courses'>
-              <Image className="menu-img img-margin" src={imageContent}/>
-              Courses
-            </Anchor>
-            <Anchor href='/dashboard/tutor/time'>
-              <Image className="menu-img" src={imageCalendar}/>
-              TimeTable
-            </Anchor>
-            <Anchor href='/dashboard/tutor/payments'>
-              <Image className="menu-img" src={imagePayments}/>
-              Payments
-            </Anchor>
+
+        
+
+
             <Anchor href='/dashboard/tutor/sessions'>
               <Image className="menu-img" src={imageSession}/>
-              Session
+              Dietas
             </Anchor>
             <Anchor href='#'>
               <Image className="menu-img img-margin" src={imageCancel}/>

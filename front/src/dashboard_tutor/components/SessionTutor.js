@@ -14,7 +14,7 @@ import Heading from 'grommet/components/Heading';
 import Footer from 'grommet/components/Footer';
 import TextInput from 'grommet/components/TextInput';
 import SearchInput from 'grommet/components/SearchInput';
-
+import Section from 'grommet/components/Section';
 
 export class SessionTutor extends Component {
 
@@ -77,8 +77,8 @@ export class SessionTutor extends Component {
       <Box>
         <Box>
         <div className="inline-session">
-          <h1>Sessions</h1>
-          <button onClick={this.onOpenLayer.bind(this)}> + Add</button>
+          <h1>Dietas</h1>
+
           </div>
           <SearchInput className="searchInp" placeHolder='Buscar'
           suggestions={undefined} />
@@ -87,13 +87,13 @@ export class SessionTutor extends Component {
                 <div className="inline-session-top-image">
               <Image src={imageIdea} size='small'/>
                 <div className="inline-session-top ">
-              <button type="button" className="edit-button">Ver</button>
-                <button type="button" className="edit-button">Eliminar</button>
+              <button type="button" className="seeButton">Ver</button>
+                <button type="button" className="removeButton">Eliminar</button>
                 </div>
                 </div>
-              <Paragraph margin="none">
-                Trial
-              </Paragraph>
+              <h3 margin="none">
+                Dieta 1
+              </h3>
               <Paragraph margin="none">
                 Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor
               </Paragraph>
@@ -102,49 +102,19 @@ export class SessionTutor extends Component {
             <div className="inline-session-top-image">
           <Image src={imageIdea} size='small'/>
             <div className="inline-session-top ">
-          <button type="button" className="edit-button">Ver</button>
-            <button type="button" className="edit-button">Eliminar</button>
+          <button type="button" className="seeButton">Ver</button>
+            <button type="button" className="removeButton">Eliminar</button>
             </div>
             </div>
-              <Paragraph margin="none">
-                1hr
-              </Paragraph>
+              <h3 margin="none">
+                Dieta 2
+              </h3>
               <Paragraph margin="none">
                 Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor
               </Paragraph>
             </div>
 
-            <div className="card">
-              <h4> Session  </h4>
-              <div className="inline-session">
-              <FormField className="container-session-one">
-    <TextInput id='item1'
-      name='item-1'
-      value='name'
 
-      suggestions={['name']} />
-  </FormField>
-
-
-  <FormField className="container-session-three">
-<TextInput id='item1'
-name='item-1'
-value='Description'
-
-suggestions={['name']} />
-</FormField>
-
-</div>
-  <FormField className="container-session-two">
-<TextInput id='item1'
-name='item-1'
-value='cost'
-
-
-suggestions={['cost']} />
-</FormField>
-  <button type="button" className="submit-tutor-button">OK</button>
-            </div>
 
 
           </div>

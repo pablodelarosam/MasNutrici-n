@@ -66,19 +66,88 @@ text-align: center;
   width: 100%;
   margin: 0 auto;
 
-  button {
-        margin-left: 50% !important;
-    width: 100px;
-    background-color: none !important;
-    color: #535ba1 !important;
-    font-size: 1.5em !important;
-    border: none !important;
+  .removeButton {
+    border-radius: 25px !important;
+    margin-left: 50%;
+    color: white !important;
+    background: #fc3d02 !important;
+    margin-top: 5%;
+    border-color: #fc3d02 !important;
+    width: 40%;
+    margin-right: 14%;
   }
+
+  .seeButton {
+    border-radius: 25px !important;
+    margin-left: 50%;
+    color: white !important;
+    background: royalblue !important;
+    margin-top: 5%;
+    border-color: royalblue !important;
+    width: 40%;
+    margin-right: 14%;
+  }
+
+
+
+  button {
+
+  }
+}
+
+
+.actionsection {
+  width: 20%;
+}
+
+.inline-session-topdoc {
+  display: grid;
+
+
+
+  .removeButton {
+    border-radius: 25px !important;
+
+    color: white !important;
+    background: #fc3d02 !important;
+    margin-top: 5%;
+    border-color: #fc3d02 !important;
+    width: 40%;
+
+  }
+
+  .seeButton {
+    border-radius: 25px !important;
+
+    color: white !important;
+    background: royalblue !important;
+    margin-top: 5%;
+    border-color: royalblue !important;
+    width: 40%;
+
+  }
+
+
+
+  button {
+
+  }
+}
+
+.sideBarDoctor {
+  margin-top: 37%;
+  background: #3f51b5 !important;
 }
 
 .inline-session-top-image {
     display: inline-flex;
     width: 31%;
+    margin: 0 auto;
+}
+
+.inline-session-top-imagePatients {
+    display: inline-flex;
+    width: 24%;
     margin: 0 auto;
 }
 
@@ -156,10 +225,65 @@ text-align: center;
 
 .box-login {
   width: 500px;
+  margin-bottom: 15%;
   background: white;
   margin: -250px auto 0;
   border-radius: 5px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+
+.textField-login {
+  border: none;
+border-bottom: 5px solid purple;
+    margin-bottom: 7%;
+}
+
+h1 {
+  color: #3d4caf !important;
+  font-weight: 400 !important;
+}
+  img {
+    width: 30% !important;
+    background: #b1bdc3 !important;
+    border-radius: 69px;
+  }
+
+  button {
+
+  border: none !important;
+
+  margin-left: 37%;
+  background: blue !important;
+  color: white !important;
+
+  }
+}
+
+.doctorPatiensImage {
+  width: 100% !important;
+}
+
+.sectionLogin {
+  margin-left: -27%;
+  background: #1a237e;
+  h1 {
+    margin-left: 2%;
+    color: white;
+  }
+}
+
+.textLoginIntro {
+
+  h1 {
+    text-align: center;
+    color: #3d4caf !important;
+    font-weight: 400 !important;
+  }
+
+  p {
+    width: 100%;
+    max-width: initial !important;
+
+  }
 }
 
 
@@ -200,6 +324,9 @@ text-align: center;
   border-radius: 5px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
 
+.patient-info {
+  width: 85% !important;
+}
   .paragraph-box-top {
     margin-top: 10%;
   }
@@ -276,6 +403,44 @@ text-align: center;
   }
 }
 
+
+.box-classinfo-leftPatient {
+  margin-bottom: 5% !important;
+  margin: 0 auto;
+  width: 800px;
+  background: white; //  margin: 11% auto 0 auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+
+  .paragraph-box-top {
+    margin-top: 10%;
+  }
+
+  .macros-p {
+    color: #acbdc4;
+    font-weight: 500;
+  }
+
+  .box-right-info {
+    flex-basis: 82% !important;
+
+  }
+
+  .review-picture {
+    height: 100px;
+    width: 100px;
+    background: lightGray;
+    border-radius: 52px;
+    //  margin-left: -86%;
+  }
+
+  .head-profile-top {
+    font-weight: 400 !important;
+  }
+
+
+}
+
 .box-classinfo-right {
   margin-top: 30%;
   margin-left: -23%;
@@ -322,7 +487,10 @@ text-align: center;
   margin: 5% auto 0;
   border-radius: 5px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-
+  margin-bottom: 5%;
+.selectDiet {
+  width: 36%;
+}
   button {
     border-radius: 40px !important;
   }
@@ -395,6 +563,29 @@ span {
   width: 100%;
   padding: 20px;
   text-align: center;
+
+  .headstatus {
+    font-weight: 500 !important;
+  }
+}
+
+.cardDoctor {
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+  width: 63%;
+  padding: 20px;
+  text-align: center;
+  background: white !important;
+/* text-align: center; */
+margin: 0 auto !important;
+margin-top: -21% !important;
+ h3 {
+   font-size: 40px;
+ }
+p {
+  max-width: inherit;
+  width: 100% !important;
+}
 }
 
 .last-activity {
@@ -524,10 +715,10 @@ span {
   border-left: none;
 
   .prof-picture {
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
     background: lightgray;
-    border-radius: 25px;
+    border-radius: 70px;
   }
 
   .prof-name {
@@ -653,4 +844,111 @@ border-top: none;
     border-right: none;
     border-left: none;
     border-bottom: 3px solid purple !important;
+}
+
+.middle-home-container {
+  background: #273139;
+  width: 100%;
+/* margin: 0 auto; */
+padding-left: 23%;
+padding-top: 5%;
+
+  p {
+    margin-top: 5%;
+      color: white !important;
+  }
+
+}
+
+.top-home-container {
+  text-align: center;
+    margin-bottom: 5%;
+  p {
+    color: black;
+  }
+}
+
+.contact-home-container {
+
+
+    h1 {
+       color: black !important;
+       font-weight: 500;
+    }
+
+    .contact-info {
+    //  width: 100%;
+          /* padding-left: 22%; */
+          margin-left: 12%;
+    }
+
+    .icon-width {
+      width: 200px;
+    }
+}
+
+.loginButton {
+  margin-left: 60%;
+  margin-top: -428px;
+  margin-bottom: 21% !important;
+  border: none !important;
+  font-size: 40px !important;
+  color: white !important;
+}
+
+.addBlock {
+  text-align: center;
+margin: 5% 0 5% 0;
+
+button {
+  border: none !important;
+  color: #5e62a0 !important;
+}
+
+a {
+  color: #5e62a0 !important;
+  text-decoration: none;
+  font-size: 25px;
+}
+}
+
+.boxDiet {
+  width: 75% !important;
+}
+
+.PatientList {
+  margin-bottom: 5%;
+
+  li {
+    border-top: none;
+  }
+  .macros-p {
+    color: #acbdc4 !important;
+    font-weight: 500 !important;
+  }
+
+}
+
+.totalMacros {
+  text-align: right;
+      color: #acbdc4 !important;
+      font-weight: 500 !important;
+}
+
+.tableProfile {
+
+ th {
+   border-right: 2px solid gray !important;
+   color: white;
+   background: #424242;
+ }
+
+ tr {
+   border-right: 2px solid gray !important;
+   background: #eeeeee;
+ }
+
+ td {
+   border-right: 2px solid gray !important;
+ }
 }

@@ -13,6 +13,8 @@ import TableRow from 'grommet/components/TableRow';
 import List from 'grommet/components/List';
 import ListItem from 'grommet/components/ListItem';
 
+import CheckBox from 'grommet/components/CheckBox';
+
 export class DashboardContainer extends Component {
   render() {
     const arroyLeft = require('../../static/img/left.svg');
@@ -20,57 +22,40 @@ export class DashboardContainer extends Component {
     const imageCalendar = require('../../static/img/blackCalendar.svg');
     const {children} = this.props;
     return (
-      <Box>
+      <Box className="boxDiet" >
 
-        <Box style={{}} size={{
-          width: {
-            max: "xxlarge"
-          }
-        }} direction="row">
-          <Box className="courses-top" pad="medium" basis="1/2">
-            <h3>
-              My courses
-            </h3>
+        <Box  direction="row">
+          <Box className="courses-top" pad="medium" basis="1">
+            <h1>
+              Dietas
+            </h1>
 
           </Box>
-          <Box pad="medium" basis="1/2">
-            <div className="inline-optc">
-              <button>
-                <Image className="arroy-image" src={arroyLeft} size="small"/>
-              </button>
-              <button>
-                <Image className="arroy-image" src={arroyRight} size="small"/>
-              </button>
-            </div>
 
-          </Box>
         </Box>
 
-        <List selectable={true}>
+        <List className="PatientList" selectable={true}>
+          <h2> Desayunos </h2>
           <ListItem justify='between' separator='horizontal' className="table-course">
+
             <span>
               <div className="prof-picture"></div>
             </span>
             <span>
               <p className="prof-name">
-                Prof.Rajiv
+                Opción 1
               </p>
               <p>
-                English
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes
               </p>
             </span>
             <span className='secondary'>
-              <p>
-                <span>
-                  <Image className="img-calendar" src={imageCalendar} size="small"/>
-                </span>
-                20/05/2017
+              <p className="macros-p">
+
+                5 macros
               </p>
-              <p>52 min
-              </p>
-              <p>
-                $20 USD
-              </p>
+            <CheckBox />
+
             </span>
           </ListItem>
           <ListItem justify='between' separator='horizontal' className="table-course">
@@ -79,79 +64,73 @@ export class DashboardContainer extends Component {
             </span>
             <span>
               <p className="prof-name">
-                Prof.Rajiv
+                Opción 2
               </p>
               <p>
-                English
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes
               </p>
             </span>
             <span className='secondary'>
-              <p>
-                <span>
-                  <Image className="img-calendar" src={imageCalendar} size="small"/>
-                </span>
-                20/05/2017
+              <p className="macros-p">
+
+                5 macros
               </p>
-              <p>52 min
-              </p>
-              <p>
-                $20 USD
-              </p>
-            </span>
-          </ListItem>
-          <ListItem justify='between' separator='horizontal' className="table-course">
-            <span>
-              <div className="prof-picture"></div>
-            </span>
-            <span>
-              <p className="prof-name">
-                Prof.Rajiv
-              </p>
-              <p>
-                English
-              </p>
-            </span>
-            <span className='secondary'>
-              <p>
-                <span>
-                  <Image className="img-calendar" src={imageCalendar} size="small"/>
-                </span>
-                20/05/2017
-              </p>
-              <p>52 min
-              </p>
-              <p>
-                $20 USD
-              </p>
-            </span>
-          </ListItem>
-          <ListItem justify='between' separator='horizontal' className="table-course">
-            <span>
-              <div className="prof-picture"></div>
-            </span>
-            <span>
-              <p className="prof-name">
-                Prof.Rajiv
-              </p>
-              <p>
-                English
-              </p>
-            </span>
-            <span className='secondary'>
-              <p>
-                <span>
-                  <Image className="img-calendar" src={imageCalendar} size="small"/>
-                </span>
-                20/05/2017
-              </p>
-              <p>52 min
-              </p>
-              <p>
-                $20 USD
-              </p>
+            <CheckBox />
+
             </span>
           </ListItem>
         </List>
+
+        <List className="PatientList " selectable={true}>
+          <h2> Comida </h2>
+          <ListItem justify='between' separator='horizontal' className="table-course">
+
+            <span>
+              <div className="prof-picture"></div>
+            </span>
+            <span>
+              <p className="prof-name">
+                Opción 1
+              </p>
+              <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes
+              </p>
+            </span>
+            <span className='secondary'>
+              <p className="macros-p">
+
+                5 macros
+              </p>
+            <CheckBox />
+
+            </span>
+          </ListItem>
+          <ListItem justify='between' separator='horizontal' className="table-course">
+            <span>
+              <div className="prof-picture"></div>
+            </span>
+            <span>
+              <p className="prof-name">
+                Opción 2
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes
+              </p>
+            </span>
+            <span className='secondary'>
+              <p className="macros-p">
+
+                5 macros
+              </p>
+            <CheckBox />
+
+            </span>
+          </ListItem>
+        </List>
+
+
+        <h1 className="totalMacros"> 20 Macros </h1>
+
       </Box>
     )
   }

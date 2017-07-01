@@ -18,8 +18,7 @@ export class HeaderDash extends Component {
         }} flex="grow">
           <Box pad="small"/>
           <Menu label="Label" inline={true} direction="row" flex="grow">
-            <Anchor href="/dashboard/student">Dashboard</Anchor>
-            <Anchor href="/dashboard/student_explore">Explore</Anchor>
+      
           </Menu>
         </Box>
       </Header>

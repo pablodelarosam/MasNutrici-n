@@ -21,13 +21,17 @@ export class Home extends Component {
 
     render() {
 
-        const imageIdea = require('../../static/img/idea.svg');
-        const imageTeach = require('../../static/img/teach.svg');
-        const imageWorld = require('../../static/img/world.svg');
+        const imageDoctor = require('../../static/img/doctor.svg');
+        const imageCarrot = require('../../static/img/carrot.svg');
+        const imageScale = require('../../static/img/scale.svg');
+        const imageMail = require('../../static/img/email.svg');
+        const imagePhone = require('../../static/img/hand.svg');
+        const imageMap = require('../../static/img/map.svg');
 
         return (
             <Box className="home">
-                <DivImage height="480px" img="https://wallpaperscraft.com/image/students_boys_girls_study_friends_80723_3480x2362.jpg" gradient={true} curverd={false}/>
+
+                <DivImage height="480px" img="https://orangecityiowa.com/wp-content/uploads/2016/04/healtyh1.jpg" gradient={true} curverd={false}/>
 
                 <Box align="center" pad={{
                     vertical: "large",
@@ -35,6 +39,9 @@ export class Home extends Component {
                 }} style={{
                     marginBottom: 100
                 }}>
+
+
+
                     <Box style={{
                         marginTop: -220,
                         zIndex: 99
@@ -45,16 +52,15 @@ export class Home extends Component {
                             "max": "xxlarge"
                         }
                     }}>
+
+
+
                         <Heading tag="h1" strong={true}>
-                            Be On Demand
+                            +Nutrición
                         </Heading>
-                        <div className="inline-opts">
-                            <button>I'm a teacher</button>
-                            <button>I'm a professor</button>
-                        </div>
-
+                        <h2> Slogan </h2>
                     </Box>
-
+                 <button className="loginButton"> <a href="/login"> Login </a> </button>
                     <Box style={{
                         marginTop: 50
                     }} size={{
@@ -62,106 +68,157 @@ export class Home extends Component {
                             max: "xxlarge"
                         }
                     }} direction="row">
-                        <Box pad="medium" basis="1/2">
+                        <Box className="top-home-container" pad="medium" basis="1/2">
                             <Headline size="small" strong={true} margin="medium">
-                                What's MIND·BOARD?
+                                Misión
                             </Headline>
                             <Paragraph margin="none">
-                                MIND·BOARD is an Online Learning Platform, which is based on the sharing economy. We strongly believe that many people have awesome teaching skills with great expertise on many fields; and also we know that there are many people around the world who wants to access to reliable knowledge.
+                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
                             </Paragraph>
                         </Box>
-                        <Box pad="medium" basis="1/2">
-                            <Image src={imageIdea} size='small'/>
+
+                        <Box className="top-home-container" pad="medium" basis="1/2">
+                            <Headline size="small" strong={true} margin="medium">
+                                Visión
+                            </Headline>
+                            <Paragraph margin="none">
+                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                            </Paragraph>
                         </Box>
+
+
+
                     </Box>
+                    <Box className="middle-home-container">
                     <Box size={{
                         width: {
                             max: "xxlarge"
                         }
                     }} direction="row">
                         <Box pad="medium" basis="1/2">
-                            <Image src={imageTeach} size="small"/>
+                            <Image src={imageCarrot} size="small"/>
                         </Box>
                         <Box pad="medium" basis="1/2">
-                            <Headline size="small" strong={true} margin="medium">
-                                What we do?
-                            </Headline>
+
                             <Paragraph margin="none">
-                                MIND·BOARD provides a platform where people can share and monetize their knowledge whereas they teach to students from all around the world.
+                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
                             </Paragraph>
                         </Box>
                     </Box>
+
                     <Box size={{
                         width: {
                             max: "xxlarge"
                         }
                     }} direction="row">
                         <Box pad="medium" basis="1/2">
-                            <Headline size="small" strong={true} margin="medium">
-                                What we want?
-                            </Headline>
-                            <Paragraph margin="none">
-                                MIND·BOARD wants a globaly accesible, evolving and custom education; removing walls and walking through any border to share knowledge across the world; because knowledge has not limits.
-                            </Paragraph>
+                        <Paragraph margin="none">
+                          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                        </Paragraph>
+
                         </Box>
                         <Box pad="medium" basis="1/2">
-                            <Image src={imageWorld} size="small"/>
+                              <Image src={imageScale} size="small"/>
+
                         </Box>
                     </Box>
+
+                    <Box size={{
+                        width: {
+                            max: "xxlarge"
+                        }
+                    }} direction="row">
+                        <Box pad="medium" basis="1/2">
+                            <Image src={imageDoctor} size="small"/>
+                        </Box>
+                        <Box pad="medium" basis="1/2">
+
+                            <Paragraph margin="none">
+                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                            </Paragraph>
+                        </Box>
+                    </Box>
+                    </Box>
+
+
                 </Box>
                 <Box>
-                    <DivImage height="250px" img="https://wallpaperscraft.com/image/students_boys_girls_study_friends_80723_3480x2362.jpg" gradient={false}/>
-                    <Box align="center" pad={{
+                    <DivImage height="250px" img="" gradient={false}/>
+                    <Box className="contact-home-container" align="center" pad={{
                         vertical: "large",
                         between: "small"
                     }}>
                         <Box style={{
-                            marginTop: -250,
+                            marginTop: -350,
                             zIndex: 99
                         }} pad={{
                             horizontal: "large"
-                        }} align="center" textAlign="right" size={{
-                            "width": {
-                                "max": "xxlarge"
-                            }
-                        }}>
-                            <Heading tag="h2" strong={true}>
-                                Be Smart, Learn Different
+                        }} align="center" textAlign="right">
+                            <Heading  strong={true}>
+                                Contacto
                             </Heading>
+
+                            <Box className="contact-info"  direction="row">
+
+                                <Box pad="medium" basis="1/4">
+
+                                      <Box  direction="row">
+                                          <Box className="icon-width" pad="medium" basis="1/2">
+                                          <Image src={imageMail} size="small"/>
+                                          </Box>
+                                          <Box pad="medium" basis="1/2">
+                                          <Paragraph margin="none">
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                          </Paragraph>
+                                          </Box>
+
+                                      </Box>
+                                </Box>
+
+                                <Box pad="medium" basis="1/4">
+
+                                      <Box  direction="row">
+                                          <Box className="icon-width" pad="medium" basis="1/2">
+                                          <Image src={imagePhone} size="small"/>
+                                          </Box>
+                                          <Box pad="medium" basis="1/2">
+                                          <Paragraph margin="none">
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                          </Paragraph>
+                                          </Box>
+
+                                      </Box>
+                                </Box>
+
+                                <Box pad="medium" basis="1/4">
+
+                                      <Box  direction="row">
+                                          <Box className="icon-width" pad="medium" basis="1/2">
+                                        <Image src={imageMap} size="small"/>
+                                          </Box>
+                                          <Box pad="medium" basis="1/2">
+                                          <Paragraph margin="none">
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                          </Paragraph>
+                                          </Box>
+
+                                      </Box>
+                                </Box>
+
+
+
+                            </Box>
+
+
+
+
+
+
                         </Box>
 
                     </Box>
                 </Box>
-                <Box align="center" pad={{
-                    vertical: "large",
-                    between: "small"
-                }}>
-                    <Form className="contact-form">
-                        <Header>
-                            <Heading tag="h3" strong={true}>
-                                Contact us
-                            </Heading>
-                        </Header>
-                        <FormFields>
-                            <FormField label='Name'>
-                                <TextInput/>
-                            </FormField>
-                            <FormField label='Email'>
-                                <TextInput/>
-                            </FormField>
-                            <FormField label='Message'>
-                                <TextInput/>
-                            </FormField>
-                        </FormFields>
-                        <Footer align="center" pad={{
-                            "vertical": "medium"
-                        }}>
-                        <div className="inline-opts center">
-                            <button>Send</button>
-                        </div>
-                        </Footer>
-                    </Form>
-                </Box>
+
 
                 <Footer colorIndex="light-2" pad={{
                     vertical: "large"

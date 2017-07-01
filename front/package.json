@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "axios": "^0.15.3",
+    "google-maps-react": "^1.0.19",
     "grommet": "^1.2.0",
     "moment": "^2.18.1",
     "node-sass": "^4.3.0",

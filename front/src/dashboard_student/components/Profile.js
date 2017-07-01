@@ -13,6 +13,10 @@ import Paragraph from 'grommet/components/Paragraph';
 import Image from 'grommet/components/Image';
 import Tabs from 'grommet/components/Tabs';
 import Tab from 'grommet/components/Tab';
+import Table from 'grommet/components/Table';
+import TableRow from 'grommet/components/TableRow';
+import Select from 'grommet/components/Select';
+
 export class ProfileStudent extends Component {
   render() {
     const {children} = this.props;
@@ -26,7 +30,7 @@ export class ProfileStudent extends Component {
           <h1 className="head-profile-top">
             Felipe
           </h1>
-          <Box style={{}} size={{
+          <Box className="patient-info" style={{}} size={{
             width: {
               max: "xxlarge"
             }
@@ -34,62 +38,113 @@ export class ProfileStudent extends Component {
             <Box pad="medium" basis="1/2">
 
               <Paragraph margin="none">
-                contacto.craftcode@gmail.com
+                22 años
               </Paragraph>
 
               <Paragraph margin="none" className="paragraph-box-top">
-                Birthday
+                65 kg
               </Paragraph>
 
             </Box>
             <Box pad="medium" basis="1/2">
-              <Paragraph margin="none" className="password">
+
+            <Paragraph margin="none" className="password">
+              contacto.craftcode@gmail.com
+            </Paragraph>
+
+              <Paragraph margin="none" className="paragraph-box-top">
                 Password
               </Paragraph>
-              <button type="button" className="button-profile-top">Edit</button>
+
             </Box>
           </Box>
         </Box>
 
         <Box className="box-profile-midle " align='left' pad='medium' margin='small' colorIndex='light-2'>
           <h3>
-            Billing Method
+            Dieta
           </h3>
 
           <Box className="">
 
-            <Tabs>
-              <Tab title='Stripe'>
-                <Paragraph>
-                  Stripe
-                </Paragraph>
 
-              </Tab>
-              <Tab title='Paypal'>
-                <Paragraph>
-                  Paypal
-                </Paragraph>
+<Select className="selectDiet" placeHolder='Elegir Dieta'
+  options={['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']}
+  value={undefined} />
+  <h3>
+    Notas
+  </h3>
 
-              </Tab>
-            </Tabs>
+  <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, </p>
 
-            <div>
-              <button type="button" className="edit-button">Edit</button>
-              <button type="button" className="remove-button">Remover</button>
-            </div>
           </Box>
 
         </Box>
 
-        <Box className="box-profile-bottom" align='left' pad='medium' margin='small' colorIndex='light-2'>
-          <h4>
-            Promo code
-          </h4>
-          <Form className="form-profile-bottom">
-            <input type="email" placeholder="Code"/>
-            <button type="button" className="button-profile-bottom">Apply</button>
-          </Form>
-        </Box>
+        <Table className="tableProfile">
+          <thead>
+            <tr>
+              <th>
+                Cm
+              </th>
+              <th>
+                Masa
+              </th>
+              <th>
+               Grasa
+              </th>
+              <th>
+                Peso
+              </th>
+              <th>
+                Últ. Visita
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <TableRow>
+              <td>
+                80
+              </td>
+              <td>
+                80
+              </td>
+              <td className='secondary'>
+                23
+              </td>
+              <td className='secondary'>
+                65 kg
+              </td>
+
+              <td className='secondary'>
+                20/10/2017
+              </td>
+            </TableRow>
+            <TableRow>
+              <td>
+                90
+              </td>
+              <td>
+                100
+              </td>
+              <td className='secondary'>
+                22
+              </td>
+
+              <td className='secondary'>
+                63 kg
+              </td>
+
+              <td className='secondary'>
+                22/10/2017
+              </td>
+            </TableRow>
+
+
+          </tbody>
+        </Table>
+
+
 
       </Box>
 

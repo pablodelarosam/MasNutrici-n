@@ -14,111 +14,115 @@ import Image from 'grommet/components/Image';
 import Tabs from 'grommet/components/Tabs';
 import Tab from 'grommet/components/Tab';
 import CheckBox from 'grommet/components/CheckBox';
+import DivImage from '../../general_components/DivImage';
+
 
 export class ProfileTutor extends Component {
   render() {
     const {children} = this.props;
-    const imageIdea = require('../../static/img/idea.svg');
+    const imageIdea = require('../../static/img/news.svg');
     const imageWorld = require('../../static/img/world.svg');
     const imageFace = require('../../static/img/facw.svg');
     return (
-      <Box>
-        <Box className="box-profile-top-tutor " align='center' pad='medium' margin='small' colorIndex='light-2'>
 
-          <Box style={{}} size={{
-            width: {
-              max: "xxlarge"
-            }
-          }} direction="row">
-            <Box pad="medium" basis="1/2">
-              <Image src={imageFace} size="small"/>
+      <Box className="doctorPatiensImage">
+      <div >
+        <DivImage height="480px" img="https://institutonutrigenomica.com/wp-content/uploads/2016/05/presencial-profesionales-nutricion.png" gradient={false} curverd={false}/>
+        </div>
+        <div className="cardDoctor">
+        <div className="inline-session-top-imagePatients">
+      <Image src={imageIdea} size='small'/>
+        <div className="inline-session-top ">
 
-            </Box>
-            <Box pad="medium" basis="1/2">
-
-              <h1 className="head-profile-top">
-                Felipe
-              </h1>
-
-              <Paragraph margin="none" className="password">
-                contact.craftcode@gmail.com
-              </Paragraph>
-
-              <Paragraph margin="none" className="password">
-                Location-Local time
-              </Paragraph>
-
-              <Paragraph margin="none" className="password">
-                Password
-              </Paragraph>
-
-            </Box>
-          </Box>
-        </Box>
-
-        <Box className="box-profile-midle " align='left' pad='medium' margin='small' colorIndex='light-2'>
-          <h3>
-            Overview
+        </div>
+        </div>
+          <h3 margin="none">
+            Dieta 2
           </h3>
-
           <Paragraph margin="none">
-            Lorem ipsum dolor sit amet
+            Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor
           </Paragraph>
+        </div>
 
+        <div className="addBlock">
+        <button> <a> +Agregar bloque </a> </button>
+        </div>
+
+        <Box className="box-classinfo-leftPatient" align='center' pad='medium' margin='small' colorIndex='light-2'>
+        <div>
+          <h2> Desayuno </h2>
+          </div>
+            <Box style={{
+
+            }} size={{
+                width: {
+                    max: "xxlarge"
+                }
+            }} direction="row">
+
+                <Box pad="medium" basis="">
+
+                  <div className="review-picture">
+
+                  </div>
+
+                </Box>
+
+                <Box className="box-right-info" pad="medium" basis="1/2">
+
+
+                  <h4> Opción 1 </h4>
+                    <h4 className="macros-p"> 4 macros </h4>
+
+
+
+                    <Paragraph margin="none">
+                      Lorem Ipsum dolor sit arem Lorem Ipsum dolor sit arem Lorem Ipsum dolor sit arem Lorem Ipsum dolor sit arem Lorem Ipsum dolor sit arem
+                    </Paragraph>
+
+
+                </Box>
+
+            </Box>
         </Box>
 
-        <Box className="box-profile-midle " align='left' pad='medium' margin='small' colorIndex='light-2'>
-          <div className="inline-optc">
-            <h3>
-              Work experience
-            </h3>
-            <CheckBox className="checkbox-class" label='' reverse={false} disabled={false} toggle={false}/>
+
+        <Box className="box-classinfo-leftPatient" align='center' pad='medium' margin='small' colorIndex='light-2'>
+        <div>
+          <h2> Comida </h2>
           </div>
+            <Box style={{
 
-          <Paragraph margin="none">
-            Work1
-          </Paragraph>
+            }} size={{
+                width: {
+                    max: "xxlarge"
+                }
+            }} direction="row">
 
-          <Paragraph margin="none">
-            Lorem ipsum dolor sit amet
-          </Paragraph>
+                <Box pad="medium" basis="">
 
-        </Box>
+                  <div className="review-picture">
 
-        <Box className="box-profile-midle " align='left' pad='medium' margin='small' colorIndex='light-2'>
-          <div className="inline-optc">
-            <h3>
-              Subjects
-            </h3>
-            <CheckBox className="checkbox-class" label='' reverse={false} disabled={false} toggle={false}/>
-          </div>
+                  </div>
 
-          <Paragraph margin="none">
-            Work1
-          </Paragraph>
+                </Box>
 
-          <Paragraph margin="none">
-            Lorem ipsum dolor sit amet
-          </Paragraph>
+                <Box className="box-right-info" pad="medium" basis="1/2">
 
-        </Box>
 
-        <Box className="box-profile-midle " align='left' pad='medium' margin='small' colorIndex='light-2'>
-          <div className="inline-optc">
-            <h3>
-              Languages
-            </h3>
-            <CheckBox className="checkbox-class" label='' reverse={false} disabled={false} toggle={false}/>
-          </div>
+                  <h4> Opción 1 </h4>
+                    <h4 className="macros-p"> 4 macros </h4>
 
-          <Paragraph margin="none">
-            English
-          </Paragraph>
 
-          <Paragraph margin="none">
-            French
-          </Paragraph>
 
+                    <Paragraph margin="none">
+                      Lorem Ipsum dolor sit arem Lorem Ipsum dolor sit arem Lorem Ipsum dolor sit arem Lorem Ipsum dolor sit arem Lorem Ipsum dolor sit arem
+                    </Paragraph>
+
+
+                </Box>
+
+            </Box>
         </Box>
 
       </Box>

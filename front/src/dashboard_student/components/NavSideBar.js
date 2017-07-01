@@ -24,7 +24,7 @@ export class NavSidebar extends Component {
       <Sidebar colorIndex='neutral-4' fixed={true} size='medium'>
         <Header pad='medium' justify='between'>
           <Title className="title-dash">
-            MB
+
           </Title>
         </Header>
         <Box className="box-profile-nav " flex='grow' justify='start'>
@@ -38,20 +38,18 @@ export class NavSidebar extends Component {
           <Menu primary={true}>
             <Anchor href='/dashboard/student/profile' className='active'>
               <Image className="menu-img" src={imageFace}/>
-              Profile
+              Perfil
             </Anchor>
-            <Anchor href='/dashboard/student/newsfeed'>
+            <Anchor href='/dashboard/student_explore'>
               <Image className="menu-img" src={imageFeed}/>
-              NewsFeed
+            Estatus
             </Anchor>
+
             <Anchor href='/dashboard/student/course'>
               <Image className="menu-img img-margin" src={imageContent}/>
-              Courses
+              Dietas
             </Anchor>
-            <Anchor href='/dashboard/student/time'>
-              <Image className="menu-img" src={imageCalendar}/>
-              TimeTable
-            </Anchor>
+
             <Anchor href='/'>
               <Image className="menu-img img-margin" src={imageCancel}/>
               Logout

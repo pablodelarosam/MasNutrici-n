@@ -12,86 +12,59 @@ import Anchor from 'grommet/components/Anchor';
 export class DashboardExplore extends Component {
 
   render() {
-    const imageStar = require('../../static/img/star.svg');
+      const imageCalendar = require('../../static/img/blackCalendar.svg');
+
     const {children} = this.props;
     return (
-      <Box colorIndex='light-2'>
-        <Box className="explore">
-          <div className="explore-img"></div>
-          <Box className="box-explore-midle" align='end' pad='medium' margin='small'>
-            <div className="inline-optc">
-              <h4>
-                Prof.Rajiv
-              </h4>
-              <div className="inline-opte">
-                <Image src={imageStar} size="small"/>
-                <Image src={imageStar} size="small"/>
-                <Image src={imageStar} size="small"/>
-                <Image src={imageStar} size="small"/>
-              </div>
-            </div>
-            <Form className="form-profile-bottom">
-              <p>
-                Lorem impusm dolor lorem Lorem impusm dolor lorem Lorem impusm dolor lorem Lorem impusm dolor lorem Lorem impusm dolor
-              </p>
-              <button>
-                <Anchor href="/dashboard/student_explore/details">Go to Profile</Anchor>
-              </button>
-            </Form>
-          </Box>
+      <Box>
+        <h1>Estado</h1>
+        <Box direction="row">
+          <Box className="box-right-info" pad="medium" basis="1/4">
+        <p> Última visita </p>
+        </Box>
+        <Box className="box-right-info" pad="medium" basis="1/4">
+      <p> 20/10/2017 </p>
+      </Box>
+      <Box className="box-right-info" pad="medium" basis="1/4">
+    <Image style={{width: 40}} src={imageCalendar} size="small"/>
+    </Box>
         </Box>
 
-        <Box className="explore">
-          <div className="explore-img"></div>
 
-          <Box className="box-explore-midle" align='end' pad='medium' margin='small' colorIndex='light-2'>
-            <div className="inline-optc">
-              <h4>
-                Prof.Rajiv
-              </h4>
-              <div className="inline-opte">
-                <Image src={imageStar} size="small"/>
-                <Image src={imageStar} size="small"/>
-                <Image src={imageStar} size="small"/>
-                <Image src={imageStar} size="small"/>
-              </div>
-            </div>
-            <Form className="form-profile-bottom">
-              <p>
-                Lorem impusm dolor lorem Lorem impusm dolor lorem Lorem impusm dolor lorem Lorem impusm dolor lorem Lorem impusm dolor
-              </p>
-              <button>
-                <Anchor href="/dashboard/student_explore/details">Go to Profile</Anchor>
-              </button>
-            </Form>
-          </Box>
+        <Box direction="row">
+        <Box className="box-right-info" pad="medium" basis="1/4">
+        <div className="card">
+
+            <h1 className="headstatus"> Grasa </h1>
+            <h1 className="headstatus"> 200 </h1>
+        </div>
         </Box>
 
-        <Box className="explore">
-          <div className="explore-img"></div>
+        <Box className="box-right-info" pad="medium" basis="1/4">
+        <div className="card">
 
-          <Box className="box-explore-midle" align='end' pad='medium' margin='small' colorIndex='light-2'>
-            <div className="inline-optc">
-              <h4>
-                Prof.Rajiv
-              </h4>
-              <div className="inline-opte">
-                <Image src={imageStar} size="small"/>
-                <Image src={imageStar} size="small"/>
-                <Image src={imageStar} size="small"/>
-                <Image src={imageStar} size="small"/>
-              </div>
-            </div>
-            <Form className="form-profile-bottom">
-              <p>
-                Lorem impusm dolor lorem Lorem impusm dolor lorem Lorem impusm dolor lorem Lorem impusm dolor lorem Lorem impusm dolor
-              </p>
-              <button>
-                <Anchor href="/dashboard/student_explore/details">Go to Profile</Anchor>
-              </button>
-            </Form>
-          </Box>
+            <h1 className="headstatus"> Masa </h1>
+            <h1 className="headstatus"> 200 </h1>
+        </div>
         </Box>
+
+
+        <Box className="box-right-info" pad="medium" basis="1/4">
+        <div className="card">
+
+            <h1 className="headstatus"> Cm </h1>
+            <h1 className="headstatus"> 200 </h1>
+        </div>
+        </Box>
+
+              </Box>
+
+              <div className="card">
+
+                  <h1 className="headstatus">Peso</h1>
+                
+              </div>
+
 
       </Box>
 

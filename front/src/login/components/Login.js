@@ -19,6 +19,7 @@ import TextInput from 'grommet/components/TextInput';
 import LoginForm from 'grommet/components/LoginForm';
 import CheckBox from 'grommet/components/CheckBox';
 import UserIcon from 'grommet/components/icons/base/User';
+import Section from 'grommet/components/Section';
 
 import {connect} from 'react-redux'
 import {login} from '../actions/login'
@@ -43,28 +44,45 @@ class Login extends Component {
     this.setState({password: e.target.value});
   }
   render() {
-
+const imageFace = require('../../static/img/facw.svg');
     return (
       <Box>
-        <DivImage height="480px" img="https://static.independent.co.uk/s3fs-public/styles/story_large/public/thumbnails/image/2015/12/02/14/Books.jpg" gradient={true} curverd={false}/>
+      <Section className="sectionLogin">
+  {<h1> +Nutrición </h1> }
+</Section>
+        <DivImage height="480px" img="https://institutonutrigenomica.com/wp-content/uploads/2016/05/presencial-profesionales-nutricion.png" gradient={false} curverd={false}/>
+  <Box direction="row">
+    <Box pad="medium" basis="1/2">
+<Box className="textLoginIntro">
+    <h1> +Nutrición </h1>
 
-        <Box className="box-login" align='center' pad='medium' margin='small' colorIndex='light-2'>
-          <h1>
-            Login
-          </h1>
-          <UserIcon/>
-          <Form>
-            <FormField className="formfield-login" style={{
-              marginTop: 25
-            }} label='Email'>
-              <input type="email" value={this.state.email} onChange={this.handleEmail.bind(this)}/>
-            </FormField>
-            <FormField className="formfield-login" label='Password'>
-              <input type="password" value={this.state.password} onChange={this.handlePassword.bind(this)}/>
-            </FormField>
-            <button onClick={this.getData.bind(this)} type="button" className="button-s">Login</button>
-          </Form>
-        </Box>
+<p>  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.  </p>
+</Box>
+    </Box>
+
+    <Box pad="medium" basis="1/2">
+    <Box className="box-login" align='center' pad='medium' margin='small' colorIndex='light-2'>
+      <h1>
+        Ingresar
+      </h1>
+    <Image src={imageFace} size="small"/>
+      <Form>
+        <FormField className="textField-login" style={{
+          marginTop: 25
+        }} label='Email'>
+          <input type="email" value={this.state.email} onChange={this.handleEmail.bind(this)}/>
+        </FormField>
+        <FormField className="textField-login" label='Password'>
+          <input type="password" value={this.state.password} onChange={this.handlePassword.bind(this)}/>
+        </FormField>
+        <button onClick={this.getData.bind(this)} type="button" className="button-s">Ingresar</button>
+      </Form>
+    </Box>
+
+    </Box>
+
+  </Box>
+
 
         <Footer colorIndex="light-2" pad={{
           vertical: "large"

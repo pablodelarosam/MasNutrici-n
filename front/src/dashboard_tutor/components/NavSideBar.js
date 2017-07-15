@@ -46,12 +46,9 @@ export class NavSidebar extends Component {
               <Image className="menu-img" src={imageFace}/>
             Pacientes
             </Anchor>
-            <Anchor href='/dashboard/tutor/profile'>
-              <Image className="menu-img" src={imageFeed}/>
-              NewsFeed
-            </Anchor>
-
         
+
+
 
 
             <Anchor href='/dashboard/tutor/sessions'>

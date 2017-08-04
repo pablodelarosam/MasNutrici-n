@@ -6,20 +6,13 @@ import {Route, IndexRoute} from 'react-router';
 import Home from "./home/components/Home.js";
 import Login from "./login/components/Login.js";
 import SignIn from "./authentication/components/Signin.js";
-import DashMainStudent from "./dashboard_student/components/DashMain.js";
-import DashStudentExplore from "./dashboard_student/components/DashExplore.js";
-import DashboardExplore from "./dashboard_student/components/DashboardExplore.js";
-import DashboardStudent from "./dashboard_student/components/Dashboard.js";
-import NewsFeedStudent from "./dashboard_student/components/NewsFeed.js";
-import TimeTableStudent from "./dashboard_student/components/TimeTable.js";
-import ProfileStudent from "./dashboard_student/components/Profile.js";
-import CourseStudent from "./dashboard_student/components/Course.js";
-import ClassInfo from "./dashboard_student/components/ClassInfo.js";
-import DashMainTutor from "./dashboard_tutor/components/DashMainTutor.js";
-import DashboardTutor from "./dashboard_tutor/components/DashboardTutor.js";
-import ProfileTutor from "./dashboard_tutor/components/ProfileTutor.js";
-import PaymentsTutor from "./dashboard_tutor/components/PaymentsTutor.js";
-import SessionTutor from "./dashboard_tutor/components/SessionTutor.js";
+import DashMainPatient from "./dashboard_patient/components/DashMain.js";
+import Status from "./dashboard_patient/components/Status.js";
+import Patients from "./dashboard_patient/components/Patients.js";
+import ProfilePatient from "./dashboard_patient/components/Profile.js";
+import DietsPatient from "./dashboard_patient/components/DietsPatient.js";
+import DashMainDoctor from "./dashboard_doctor/components/DashMainDoctor.js";
+import DietsDoctor from "./dashboard_doctor/components/DietsDoctor.js";
 
 import AppK from "./App.js"
 
@@ -28,26 +21,17 @@ export const getRoutes = (store) => <Route path="/" component={AppK}>
   <IndexRoute component={Home}/>
   <Route path="/login" component={Login}></Route>
   <Route path="/signin" component={SignIn}></Route>
-  <Route path="/dashboard/student" component={DashMainStudent}>
-    <IndexRoute component={NewsFeedStudent}/>
-    <Route path="newsfeed" component={NewsFeedStudent}/>
-    <Route path="profile" component={ProfileStudent}/>
-    <Route path="time" component={TimeTableStudent}/>
-    <Route path="course" component={CourseStudent}/>
-    <Route path="explore" component={DashStudentExplore}/>
+  <Route path="/dashboard/paciente" component={DashMainPatient}>
+    <IndexRoute component={ProfilePatient}/>
+    <Route path="perfil" component={ProfilePatient}/>
+    <Route path="dietas" component={DietsPatient}/>
+    <Route path="estatus" component={Status}/>
   </Route>
-  <Route path="/dashboard/student_explore" component={DashStudentExplore}>
-    <IndexRoute component={DashboardExplore}/>
-    <Route path="details" component={ClassInfo}/>
-  </Route>
-  <Route path="/dashboard/tutor" component={DashMainTutor}>
-  <IndexRoute component={NewsFeedStudent}/>
-  <Route path="newsfeed" component={NewsFeedStudent}/>
-    <Route path="profile" component={ProfileTutor} />
-    <Route path="payments" component={PaymentsTutor} />
-    <Route path="sessions" component={SessionTutor} />
-    <Route path="courses" component={CourseStudent} />
-    <Route path="time" component={TimeTableStudent} />
+
+  <Route path="/dashboard/doctor" component={DashMainDoctor}>
+  <IndexRoute component={Patients}/>
+  <Route path="pacientes" component={Patients}/>
+    <Route path="dietas" component={DietsDoctor} />
   </Route>
 
 </Route>

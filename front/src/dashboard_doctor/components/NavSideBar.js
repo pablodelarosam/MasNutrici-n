@@ -42,16 +42,16 @@ export class NavSidebar extends Component {
             Navigation
           </p>
           <Menu primary={true}>
-            <Anchor href='/dashboard/tutor/newsfeed' className='active'>
+            <Anchor href='/dashboard/doctor/pacientes' className='active'>
               <Image className="menu-img" src={imageFace}/>
             Pacientes
             </Anchor>
-        
 
 
 
 
-            <Anchor href='/dashboard/tutor/sessions'>
+
+            <Anchor href='/dashboard/doctor/dietas'>
               <Image className="menu-img" src={imageSession}/>
               Dietas
             </Anchor>

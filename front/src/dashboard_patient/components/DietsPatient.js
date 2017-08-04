@@ -15,7 +15,7 @@ import ListItem from 'grommet/components/ListItem';
 
 import CheckBox from 'grommet/components/CheckBox';
 
-export class DashboardContainer extends Component {
+export class DietsPatient extends Component {
   render() {
     const arroyLeft = require('../../static/img/left.svg');
     const arroyRight = require('../../static/img/right.svg');
@@ -136,4 +136,4 @@ export class DashboardContainer extends Component {
   }
 
 }
-export default connect(null, {dashboard})(DashboardContainer)
+export default connect(null, {dashboard})(DietsPatient)

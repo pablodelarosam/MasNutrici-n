@@ -16,7 +16,7 @@ import TextInput from 'grommet/components/TextInput';
 import SearchInput from 'grommet/components/SearchInput';
 import Section from 'grommet/components/Section';
 
-export class SessionTutor extends Component {
+export class DietsDoctor extends Component {
 
   constructor(props) {
     super(props);
@@ -135,4 +135,4 @@ const mapDispatchToProps = (dispatch) => {
   return {}
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SessionTutor)
+export default connect(mapStateToProps, mapDispatchToProps)(DietsDoctor)

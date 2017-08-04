@@ -17,14 +17,14 @@ import Table from 'grommet/components/Table';
 import TableRow from 'grommet/components/TableRow';
 import Select from 'grommet/components/Select';
 
-export class ProfileStudent extends Component {
+export class ProfilePatient extends Component {
   render() {
     const {children} = this.props;
     const imageIdea = require('../../static/img/idea.svg');
     const imageWorld = require('../../static/img/world.svg');
     const imageFace = require('../../static/img/facw.svg');
     return (
-      <Box>
+      <Box className="profile-patient">
         <Box className="box-profile-top " align='center' pad='medium' margin='small' colorIndex='light-2'>
           <Image src={imageFace} size="small"/>
           <h1 className="head-profile-top">
@@ -152,4 +152,4 @@ export class ProfileStudent extends Component {
   }
 
 }
-export default connect(null, {dashboard})(ProfileStudent)
+export default connect(null, {dashboard})(ProfilePatient)

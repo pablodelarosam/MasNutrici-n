@@ -9,7 +9,7 @@ import Paragraph from 'grommet/components/Paragraph';
 import Columns from 'grommet/components/Columns';
 import Anchor from 'grommet/components/Anchor';
 
-export class DashboardExplore extends Component {
+export class Status extends Component {
 
   render() {
       const imageCalendar = require('../../static/img/blackCalendar.svg');
@@ -62,7 +62,7 @@ export class DashboardExplore extends Component {
               <div className="card">
 
                   <h1 className="headstatus">Peso</h1>
-                
+
               </div>
 
 
@@ -72,4 +72,4 @@ export class DashboardExplore extends Component {
   }
 
 }
-export default connect(null, {dashboard})(DashboardExplore)
+export default connect(null, {dashboard})(Status)

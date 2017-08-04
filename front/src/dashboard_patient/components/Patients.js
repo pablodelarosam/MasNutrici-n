@@ -15,7 +15,7 @@ import Table from 'grommet/components/Table';
 import TableRow from 'grommet/components/TableRow';
 import Select from 'grommet/components/Select';
 
-export class NewsFeedStudent extends Component {
+export class Patients extends Component {
   render() {
     const {children} = this.props;
     const imageIdea = require('../../static/img/idea.svg');
@@ -180,4 +180,4 @@ export class NewsFeedStudent extends Component {
   }
 
 }
-export default connect(null, {dashboard})(NewsFeedStudent)
+export default connect(null, {dashboard})(Patients)

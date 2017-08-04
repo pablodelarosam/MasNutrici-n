@@ -21,7 +21,7 @@ export class NavSidebar extends Component {
     const imageCalendar = require('../../static/img/calendar.svg');
     const imageCancel = require('../../static/img/cancel.svg');
     return (
-      <Sidebar colorIndex='neutral-4' fixed={true} size='medium'>
+      <Sidebar className="sideBarExplore" colorIndex='neutral-4' fixed={true} size='medium'>
         <Header pad='medium' justify='between'>
           <Title className="title-dash">
 
@@ -36,16 +36,16 @@ export class NavSidebar extends Component {
             Navigation
           </p>
           <Menu primary={true}>
-            <Anchor href='/dashboard/student/profile' className='active'>
+            <Anchor href='/dashboard/paciente/perfil' className='active'>
               <Image className="menu-img" src={imageFace}/>
               Perfil
             </Anchor>
-            <Anchor href='/dashboard/student_explore'>
+            <Anchor href='/dashboard/paciente/estatus'>
               <Image className="menu-img" src={imageFeed}/>
             Estatus
             </Anchor>
 
-            <Anchor href='/dashboard/student/course'>
+            <Anchor href='/dashboard/paciente/dietas'>
               <Image className="menu-img img-margin" src={imageContent}/>
               Dietas
             </Anchor>

@@ -21,7 +21,7 @@ export class NavSidebar extends Component {
     const imageCalendar = require('../../static/img/calendar.svg');
     const imageCancel = require('../../static/img/cancel.svg');
     return (
-      <Sidebar className="sideBarExplore" colorIndex='neutral-4' fixed={true} size='medium'>
+      <Sidebar className="sideBarDoctor" colorIndex='neutral-4' fixed={true} size='medium'>
         <Header pad='medium' justify='between'>
           <Title className="title-dash"></Title>
         </Header>

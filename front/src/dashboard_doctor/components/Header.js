@@ -10,8 +10,8 @@ export class HeaderDash extends Component {
   render() {
     return (
       <Section className="sectionLogin">
-  {<h1> +Nutrición </h1> }
-</Section>
+        {< h1 > + Nutrición < /h1>}
+      </Section>
     );
   }
 

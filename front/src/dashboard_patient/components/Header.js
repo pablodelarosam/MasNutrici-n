@@ -17,9 +17,7 @@ export class HeaderDash extends Component {
           horizontal: 'medium'
         }} flex="grow">
           <Box pad="small"/>
-          <Menu label="Label" inline={true} direction="row" flex="grow">
-      
-          </Menu>
+          <Menu label="Label" inline={true} direction="row" flex="grow"></Menu>
         </Box>
       </Header>
     );

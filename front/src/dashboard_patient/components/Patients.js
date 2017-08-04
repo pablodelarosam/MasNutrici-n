@@ -23,8 +23,7 @@ export class Patients extends Component {
     return (
       <Box>
         <h1>Pacientes</h1>
-        <SearchInput className="searchInp" placeHolder='Buscar'
-        suggestions={undefined} />
+        <SearchInput className="searchInp" placeHolder='Buscar' suggestions={undefined}/>
 
         <Table className="tableProfile">
           <thead>
@@ -33,23 +32,23 @@ export class Patients extends Component {
                 Nombre
               </th>
               <th>
-              Edad
+                Edad
               </th>
               <th>
-               Peso
+                Peso
               </th>
               <th>
-              Últ. Visita
+                Últ. Visita
               </th>
               <th>
-              Acciones
+                Acciones
               </th>
             </tr>
           </thead>
           <tbody>
             <TableRow>
               <td>
-              Gerardo
+                Gerardo
               </td>
               <td>
                 23
@@ -62,10 +61,10 @@ export class Patients extends Component {
               </td>
 
               <td className='secondary actionsection'>
-              <div className="inline-session-topdoc ">
-            <button type="button" className="seeButton">Ver</button>
-              <button type="button" className="removeButton">Eliminar</button>
-              </div>
+                <div className="inline-session-topdoc ">
+                  <button type="button" className="seeButton">Ver</button>
+                  <button type="button" className="removeButton">Eliminar</button>
+                </div>
               </td>
             </TableRow>
             <TableRow>
@@ -84,93 +83,52 @@ export class Patients extends Component {
               </td>
 
               <td className='secondary'>
-              <div className="inline-session-topdoc ">
-            <button type="button" className="seeButton">Ver</button>
-              <button type="button" className="removeButton">Eliminar</button>
-              </div>
+                <div className="inline-session-topdoc ">
+                  <button type="button" className="seeButton">Ver</button>
+                  <button type="button" className="removeButton">Eliminar</button>
+                </div>
               </td>
             </TableRow>
 
             <TableRow>
-              <td>
+              <td></td>
+              <td></td>
+              <td className='secondary'></td>
 
-              </td>
-              <td>
+              <td className='secondary'></td>
 
-              </td>
-              <td className='secondary'>
-
-              </td>
-
-              <td className='secondary'>
-
-              </td>
-
-              <td className='secondary'>
-
-              </td>
+              <td className='secondary'></td>
             </TableRow>
 
             <TableRow>
-              <td>
+              <td></td>
+              <td></td>
+              <td className='secondary'></td>
 
-              </td>
-              <td>
+              <td className='secondary'></td>
 
-              </td>
-              <td className='secondary'>
-
-              </td>
-
-              <td className='secondary'>
-
-              </td>
-
-              <td className='secondary'>
-
-              </td>
+              <td className='secondary'></td>
             </TableRow>
 
             <TableRow>
-              <td>
+              <td></td>
+              <td></td>
+              <td className='secondary'></td>
 
-              </td>
-              <td>
+              <td className='secondary'></td>
 
-              </td>
-              <td className='secondary'>
-
-              </td>
-
-              <td className='secondary'>
-
-              </td>
-
-              <td className='secondary'>
-
-              </td>
+              <td className='secondary'></td>
             </TableRow>
 
             <TableRow>
-              <td>
+              <td></td>
+              <td></td>
+              <td className='secondary'></td>
 
-              </td>
-              <td>
+              <td className='secondary'></td>
 
-              </td>
-              <td className='secondary'>
-
-              </td>
-
-              <td className='secondary'>
-
-              </td>
-
-              <td className='secondary'>
-
-              </td>
+              <td className='secondary'></td>
             </TableRow>
-
 
           </tbody>
         </Table>

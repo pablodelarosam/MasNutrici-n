@@ -11,46 +11,51 @@ import CloseIcon from 'grommet/components/icons/base/Close';
 import Anchor from 'grommet/components/Anchor';
 import Box from 'grommet/components/Box';
 import Image from 'grommet/components/Image';
+import Section from 'grommet/components/Section';
+
 
 export class NavSidebar extends Component {
 
   render() {
     const imageFace = require('../../static/img/facw.svg');
-    const imageFeed = require('../../static/img/feed.svg');
+    const imagePayments = require('../../static/img/account.svg');
+    const imageSession = require('../../static/img/all.svg');
     const imageContent = require('../../static/img/content.svg');
     const imageCalendar = require('../../static/img/calendar.svg');
     const imageCancel = require('../../static/img/cancel.svg');
+    const imageFeed = require('../../static/img/feed.svg');
+
     return (
-      <Sidebar className="sideBarExplore" colorIndex='neutral-4' fixed={true} size='medium'>
+
+      <Sidebar className="sideBarDoctor" colorIndex='neutral-4' fixed={true} size='medium'>
         <Header pad='medium' justify='between'>
-          <Title className="title-dash"></Title>
+          <Title className="title-dash">
+
+          </Title>
         </Header>
         <Box className="box-profile-nav " flex='grow' justify='start'>
           <Image className="img-title" src={imageFace} size="small"/>
           <h3>
-            Felipe
+            Dr.Luis
           </h3>
           <p>
             Navigation
           </p>
           <Menu primary={true}>
-
-            <Anchor href='/dashboard/paciente/perfil' className='active'>
+            <Anchor href='/dashboard/doctor/pacientes' className='active'>
               <Image className="menu-img" src={imageFace}/>
-              Perfil
-            </Anchor>
-            <Anchor href='/dashboard/paciente/estatus'>
-              <Image className="menu-img" src={imageFeed}/>
-              Estatus
+            Pacientes
             </Anchor>
 
 
-            <Anchor href='/dashboard/paciente/dietas'>
-              <Image className="menu-img img-margin" src={imageContent}/>
+
+
+
+            <Anchor href='/dashboard/doctor/dietas'>
+              <Image className="menu-img" src={imageSession}/>
               Dietas
             </Anchor>
-
-            <Anchor href='/'>
+            <Anchor href='#'>
               <Image className="menu-img img-margin" src={imageCancel}/>
               Logout
             </Anchor>

@@ -923,7 +923,9 @@ a {
 }
 
 .boxDiet {
-  width: 75% !important;
+
+  margin-left: 17%;
+width: 57% !important;
 }
 
 .PatientList {
@@ -961,4 +963,13 @@ a {
  td {
    border-right: 2px solid gray !important;
  }
+}
+
+.sideBarExplore {
+  position: fixed;
+
+}
+
+.profile-patient {
+      margin-left: 19% !important;
 }

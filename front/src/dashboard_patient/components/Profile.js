@@ -24,7 +24,7 @@ export class ProfilePatient extends Component {
     const imageWorld = require('../../static/img/world.svg');
     const imageFace = require('../../static/img/facw.svg');
     return (
-      <Box>
+      <Box className="profile-patient">
         <Box className="box-profile-top " align='center' pad='medium' margin='small' colorIndex='light-2'>
           <Image src={imageFace} size="small"/>
           <h1 className="head-profile-top">

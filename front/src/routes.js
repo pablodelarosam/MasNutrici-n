@@ -14,6 +14,8 @@ import ProfilePatient from "./dashboard_patient/components/Profile.js";
 import DietsPatient from "./dashboard_patient/components/DietsPatient.js";
 import DashMainDoctor from "./dashboard_doctor/components/DashMainDoctor.js";
 import DietsDoctor from "./dashboard_doctor/components/DietsDoctor.js";
+import TimeTablePatient from "./dashboard_patient/components/TimeTable.js";
+import TimeTableDoctor from "./dashboard_doctor/components/TimeTable.js";
 
 import AppK from "./App.js"
 
@@ -29,12 +31,14 @@ export const getRoutes = (store) =>
     <Route path="perfil" component={ProfilePatient}/>
     <Route path="dietas" component={DietsPatient}/>
     <Route path="estatus" component={Status}/>
+    <Route path="timetable" component={TimeTablePatient}/>
   </Route>
 
   <Route path="/dashboard/doctor" component={DashMainDoctor}>
   <IndexRoute component={Patients}/>
-  <Route path="pacientes" component={Patients}/>
+    <Route path="pacientes" component={Patients}/>
     <Route path="dietas" component={DietsDoctor} />
+    <Route path="timetable" component={TimeTableDoctor}/>
   </Route>
 
 </Route>

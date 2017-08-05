@@ -48,9 +48,9 @@ export class ProfilePatient extends Component {
             </Box>
             <Box pad="medium" basis="1/2">
 
-            <Paragraph margin="none" className="password">
-              contacto.craftcode@gmail.com
-            </Paragraph>
+              <Paragraph margin="none" className="password">
+                contacto.craftcode@gmail.com
+              </Paragraph>
 
               <Paragraph margin="none" className="paragraph-box-top">
                 Password
@@ -67,15 +67,23 @@ export class ProfilePatient extends Component {
 
           <Box className="">
 
+            <Select className="selectDiet" placeHolder='Elegir Dieta' options={[
+              'one',
+              'two',
+              'three',
+              'four',
+              'five',
+              'six',
+              'seven',
+              'eight'
+            ]} value={undefined}/>
+            <h3>
+              Notas
+            </h3>
 
-<Select className="selectDiet" placeHolder='Elegir Dieta'
-  options={['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']}
-  value={undefined} />
-  <h3>
-    Notas
-  </h3>
-
-  <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+            </p>
 
           </Box>
 
@@ -91,7 +99,7 @@ export class ProfilePatient extends Component {
                 Masa
               </th>
               <th>
-               Grasa
+                Grasa
               </th>
               <th>
                 Peso
@@ -140,11 +148,8 @@ export class ProfilePatient extends Component {
               </td>
             </TableRow>
 
-
           </tbody>
         </Table>
-
-
 
       </Box>
 

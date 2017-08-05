@@ -8,12 +8,11 @@ import {dashboard} from '../actions/dashboard'
 import Split from 'grommet/components/Split';
 import Box from 'grommet/components/Box';
 import events from '../events.js'
-import Line from 'react-chartjs'
 
 BigCalendar.setLocalizer(BigCalendar.momentLocalizer(moment));
 BigCalendar.views = ['month', 'day', 'week'];
 
-export class TimeTablePatient extends Component {
+export class TimeTableDoctor extends Component {
   render() {
     const {children} = this.props;
     const allViews = Object.keys(BigCalendar.views).map(k => BigCalendar.views[k])
@@ -28,4 +27,4 @@ export class TimeTablePatient extends Component {
     )
   }
 }
-export default connect(null, {dashboard})(TimeTablePatient)
+export default connect(null, {dashboard})(TimeTableDoctor)

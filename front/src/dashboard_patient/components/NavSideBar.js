@@ -44,15 +44,18 @@ export class NavSidebar extends Component {
               Estatus
             </Anchor>
 
-
             <Anchor href='/dashboard/paciente/dietas'>
               <Image className="menu-img img-margin" src={imageContent}/>
               Dietas
             </Anchor>
 
+            <Anchor href='/dashboard/paciente/timetable'>
+              <Image className="menu-img img-margin" src={imageCalendar}/>
+              Citas
+            </Anchor>
             <Anchor href='/'>
               <Image className="menu-img img-margin" src={imageCancel}/>
-              Logout
+              Cerrar Sesion
             </Anchor>
           </Menu>
         </Box>

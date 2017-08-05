@@ -13,7 +13,6 @@ import Box from 'grommet/components/Box';
 import Image from 'grommet/components/Image';
 import Section from 'grommet/components/Section';
 
-
 export class NavSidebar extends Component {
 
   render() {
@@ -29,9 +28,7 @@ export class NavSidebar extends Component {
 
       <Sidebar className="sideBarDoctor" colorIndex='neutral-4' fixed={true} size='medium'>
         <Header pad='medium' justify='between'>
-          <Title className="title-dash">
-
-          </Title>
+          <Title className="title-dash"></Title>
         </Header>
         <Box className="box-profile-nav " flex='grow' justify='start'>
           <Image className="img-title" src={imageFace} size="small"/>
@@ -44,20 +41,19 @@ export class NavSidebar extends Component {
           <Menu primary={true}>
             <Anchor href='/dashboard/doctor/pacientes' className='active'>
               <Image className="menu-img" src={imageFace}/>
-            Pacientes
+              Pacientes
             </Anchor>
-
-
-
-
-
             <Anchor href='/dashboard/doctor/dietas'>
               <Image className="menu-img" src={imageSession}/>
               Dietas
             </Anchor>
+            <Anchor href='/dashboard/paciente/timetable'>
+              <Image className="menu-img img-margin" src={imageCalendar}/>
+              Citas
+            </Anchor>
             <Anchor href='#'>
               <Image className="menu-img img-margin" src={imageCancel}/>
-              Logout
+              Cerrar Sesion
             </Anchor>
           </Menu>
         </Box>

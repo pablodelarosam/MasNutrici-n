@@ -87,7 +87,7 @@ export class DietsDoctor extends Component {
                 <div className="inline-session-top-image">
               <Image src={imageIdea} size='small'/>
                 <div className="inline-session-top ">
-              <button type="button" className="seeButton"><a href="/dashboard/tutor/profile"> Ver </a></button>
+              <button type="button" className="seeButton"><a href="/dashboard/doctor/detalles"> Ver </a></button>
                 <button type="button" className="removeButton">Eliminar</button>
                 </div>
                 </div>

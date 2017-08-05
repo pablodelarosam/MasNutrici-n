@@ -1,8 +1,8 @@
 export default [
   {
-    'title': 'English Grammar Class',
-    'start': new Date(2017, 5, 8, 10, 30, 0, 0),
-    'end': new Date(2017, 5, 8, 12, 30, 0, 0),
+    'title': 'Gerardo',
+    'start': new Date(2017, 7, 5, 12, 30, 0, 0),
+    'end': new Date(2017, 7, 5, 14, 30, 0, 0),
     'desc': 'Today we gonna learn about past tense'
   },
   {

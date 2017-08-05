@@ -8,8 +8,9 @@ import Form from 'grommet/components/Form';
 import Paragraph from 'grommet/components/Paragraph';
 import Columns from 'grommet/components/Columns';
 import Anchor from 'grommet/components/Anchor';
-import Chart from 'react-d3-core'
-import {LineChart} from 'react-d3-basic'
+import Chart from 'react-d3-core';
+import {LineChart} from 'react-d3-basic';
+import {Line} from 'react-chartjs';
 
 export class Status extends Component {
 
@@ -68,6 +69,23 @@ export class Status extends Component {
         ]
       const x = function(d) {
           return d.index;
+      }
+
+
+      const charData = {
+        "datasets": [
+          {
+            "data": [77, 72, 70, 85, 80,75, 75],
+            "fillColor": "rgba(7, 55, 200, 0.3)",
+            "label": "Pesos",
+            "pointColor": "rgba(220,220,220,1)",
+            "pointHighlightFill": "#0040ff",
+            "pointHighlightStroke": "rgba(220,220,220,1)",
+            "pointStrokeColor": "#fff",
+            "strokeColor": "rgba(220,220,220,1)"
+          }
+        ],
+        "labels": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
       }
 
       return (
@@ -133,8 +151,7 @@ export class Status extends Component {
           <div className="card">
 
             <h1 className="headstatus">Peso</h1>
-            <LineChart width={700} height={300} data={data} chartSeries={chartSeries} x={x}/>
-
+            <Line width={700} height={300} data={charData} />
           </div>
 
         </Box>

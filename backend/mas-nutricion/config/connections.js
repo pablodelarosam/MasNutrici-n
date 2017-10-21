@@ -62,7 +62,7 @@ module.exports.connections = {
      port: 27017,
     // user: 'localhost', //optional
   //   password: 'masnutricion', //optional
-     database: 'masnutricion' //optional
+     database: '+nutricion' //optional
    },
 
   /***************************************************************************

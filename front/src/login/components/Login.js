@@ -20,10 +20,15 @@ import LoginForm from 'grommet/components/LoginForm';
 import CheckBox from 'grommet/components/CheckBox';
 import UserIcon from 'grommet/components/icons/base/User';
 import Section from 'grommet/components/Section';
-import axios from 'axios';
+import serializeForm from 'form-serialize';
+import {bindActionCreators} from 'redux';
+import * as actionCreators from '../actions/login'
+import * as generalActionCreators from '../../general_dash/dashboard'
 import {connect} from 'react-redux'
-import {login} from '../actions/login'
-import {browserHistory} from 'react-router'
+import {Link} from 'react-router';
+
+
+
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -34,31 +39,30 @@ class Login extends Component {
   }
 
   getData() {
-    console.log("PROPPS", this.props);
-    console.log("State", this.state);
-    //  this.props.fetchData('http://localhost:1337/login', this.state.email, this.state.password);
-  //  this.props.fetchData('http://localhost:1337/login/' + this.state.email + '/' + this.state.password + '');
-
-    var thistwo = this;
-    this.serverRequest = axios.get('http://localhost:1337/login/' + this.state.email + '/' + this.state.password + '').then(function(result) {
-      console.log("Resultsas", result.data);
-
-
-    })
-
+    this.props.login(this.state.email, this.state.password);
   }
-  handleEmail(e) {
-    this.setState({email: e.target.value});
+
+  handleSubmit(e) {
+    e.preventDefault()
+    const values = serializeForm(e.target, {hash: true})
+    this.setState({
+      ...values
+    });
+    this.getData();
   }
-  handlePassword(e) {
-    this.setState({password: e.target.value});
+
+  updateData(e) {
+    var values = {}
+    values[e.target.name] = e.target.value
+    this.setState(values)
   }
+
   render() {
     const imageFace = require('../../static/img/facw.svg');
     return (
       <Box>
         <Section className="sectionLogin">
-          {< h1 > + Nutrición < /h1>}
+          <h1> + Nutrición </h1>
         </Section>
         <DivImage height="480px" img="https://institutonutrigenomica.com/wp-content/uploads/2016/05/presencial-profesionales-nutricion.png" gradient={false} curverd={false}/>
         <Box direction="row">
@@ -80,16 +84,16 @@ class Login extends Component {
                 Ingresar
               </h1>
               <Image src={imageFace} size="small"/>
-              <Form>
-                <FormField className="textField-login" style={{
+              <Form onSubmit={(e) => this.handleSubmit(e)}>
+                <FormField className="formfield-login" style={{
                   marginTop: 25
                 }} label='Email'>
-                  <input type="email" value={this.state.email} onChange={this.handleEmail.bind(this)}/>
+                  <input type="email" value={this.state.email} name="email" onChange={(e) => this.updateData(e)}/>
                 </FormField>
-                <FormField className="textField-login" label='Password'>
-                  <input type="password" value={this.state.password} onChange={this.handlePassword.bind(this)}/>
+                <FormField className="formfield-login" label='Password'>
+                  <input type="password" value={this.state.password} name="password" onChange={(e) => this.updateData(e)}/>
                 </FormField>
-                <button onClick={this.getData.bind(this)} type="button" className="button-s">Ingresar</button>
+                <button className="button-s">Login</button>
               </Form>
             </Box>
 
@@ -109,29 +113,15 @@ class Login extends Component {
 
 }
 
-Login.propTypes = {
-  fetchData: PropTypes.func.isRequired,
-  hasError: PropTypes.bool.isRequired,
-  requesting: PropTypes.bool.isRequired
-};
 
 const mapStateToProps = (state, ownProps) => {
-  // Go to dashboard
-  var data = state.loginReducer;
-  if (data["status"] == 200 && data["code"] == 1) {
-    var route = data["user"]["type"] == "student"
-      ? "student"
-      : "teacher";
-    browserHistory.push('/signin')
-  } else {
-    console.log("ERROR");
-  }
-  return {data: state.loginReducer, hasError: state.loginHasError, requesting: state.loginRequest};
+  return {data: state.loginReducer, hasError: state.loginHasError};
 };
 const mapDispatchToProps = (dispatch) => {
-  return {
-    fetchData: (url, email, password) => dispatch(login(url, email, password))
-  };
+  return bindActionCreators({
+    ...actionCreators,
+    ...generalActionCreators
+  }, dispatch);
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login)

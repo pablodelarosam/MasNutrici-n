@@ -4,3 +4,7 @@ export const USER_LOGGED_OUT = 'USER_LOGGED_OUT'
 export const RECV_ERROR = 'RECV_ERROR';
 export const REQ_DATA = 'REQ_DATA';
 export const RECV_DATA = 'RECV_DATA';
+export const RECV_DATA_PROFILE = 'RECV_DATA_PROFILE';
+export const UPDATED_PROFILE = "UPDATED_PROFILE";
+// export const HOST_NAME = 'http://13.56.239.221';
+export const HOST_NAME = 'http://localhost:1337';

@@ -27,7 +27,7 @@ export const getRoutes = (store) =>
   <Route path="/login" component={Login}></Route>
   <Route path="/signin" component={SignIn}></Route>
 
-  <Route path="/dashboard/paciente" component={DashMainPatient}>
+  <Route path="/dashboard/paciente" component={DashMainPatient} onEnter={requireAuth}>
     <IndexRoute component={ProfilePatient}/>
     <Route path="perfil" component={ProfilePatient}/>
     <Route path="dietas" component={DietsPatient}/>
@@ -35,7 +35,7 @@ export const getRoutes = (store) =>
     <Route path="timetable" component={TimeTablePatient}/>
   </Route>
 
-  <Route path="/dashboard/doctor" component={DashMainDoctor}>
+  <Route path="/dashboard/doctor" component={DashMainDoctor} onEnter={requireAuth}>
   <IndexRoute component={Patients}/>
     <Route path="pacientes" component={Patients}/>
     <Route path="dietas" component={DietsDoctor} />
@@ -45,3 +45,12 @@ export const getRoutes = (store) =>
   </Route>
 
 </Route>
+
+function requireAuth(nextState, replace) {
+  if (!sessionStorage["user"]) {
+    replace({
+      pathname: '/login',
+      state: { nextPathname: nextState.location.pathname }
+    })
+  }
+}

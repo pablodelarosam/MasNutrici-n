@@ -51,6 +51,8 @@ module.exports = {
         },
 
         success: function() {
+          // Store user id in the user session
+          req.session.me = user.id;
           // All done- let the client know that everything worked.
           return res.json({
             "status": 200,
@@ -86,6 +88,7 @@ module.exports = {
             });
           }
 
+          req, session.me = newUser.id;
           // Send back the id of the new user
           return res.json({
             "status": 200,

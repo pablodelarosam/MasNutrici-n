@@ -10,20 +10,11 @@ export function loginHasError(state = false, action) {
     }
 }
 
-export function loginRequest(state = false, action) {
-    switch (action.type) {
-        case constants.REQ_DATA:
-            return action.requesting;
-
-        default:
-            return state;
-    }
-}
 
 export function loginReducer(state = {}, action) {
     switch (action.type) {
         case constants.RECV_DATA:
-            return action.data;
+            return {...state, "user": action.data["user"]};
         default:
             return state;
     }

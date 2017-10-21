@@ -34,6 +34,7 @@
   "dependencies": {
     "axios": "^0.15.3",
     "chart.js": "^1.1.1",
+    "form-serialize": "^0.7.2",
     "google-maps-react": "^1.0.19",
     "grommet": "^1.2.0",
     "moment": "^2.18.1",

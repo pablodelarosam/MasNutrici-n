@@ -70,21 +70,15 @@ export function getProfile(id, type) {
 
 export function updateProfile(userId, data) {
     // Sparse Data
-    const form = new FormData();
-    let file = data.file
-    form.append('file', file);
-    delete data["file"]
-    form.append('data', JSON.stringify(data));
-
     return function(dispatch) {
         axios({
             url: constants.HOST_NAME + '/api/v0/user/' + userId,
             method: 'put',
             responseType: 'json',
-            data: form
+            data: data
         }).then(function(response) {
           let data = response.data;
-          if(data.status == 201) {
+          if(data.status == 200) {
             dispatch(updatedProfile(true))
           }
         }).catch(function(response) {
@@ -93,6 +87,44 @@ export function updateProfile(userId, data) {
     }
 };
 
+
+export function createProfile(data) {
+    // Sparse Data
+    return function(dispatch) {
+        axios({
+            url: constants.HOST_NAME + '/api/v0/signup',
+            method: 'post',
+            responseType: 'json',
+            data: data
+        }).then(function(response) {
+          let data = response.data;
+          if(data.status == 200) {
+            dispatch(updatedProfile(true))
+          }
+        }).catch(function(response) {
+            dispatch(receiveError(true));
+        })
+    }
+};
+
+
+
+export function removeProfile(userId) {
+  return function(dispatch) {
+      axios({
+          url: constants.HOST_NAME + '/api/v0/user/' + userId,
+          method: 'delete',
+          responseType: 'json'
+      }).then(function(response) {
+        let data = response.data;
+        if(data.status == 200) {
+          dispatch(updatedProfile(true))
+        }
+      }).catch(function(response) {
+          dispatch(receiveError(true));
+      })
+  }
+}
 
 
 export function receiveDataTimeTable(array) {

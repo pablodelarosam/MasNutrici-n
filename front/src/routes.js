@@ -9,7 +9,7 @@ import SignIn from "./authentication/components/Signin.js";
 
 import DashMainPatient from "./dashboard_patient/components/DashMain.js";
 import Status from "./dashboard_patient/components/Status.js";
-import Patients from "./dashboard_patient/components/Patients.js";
+import Patients from "./dashboard_doctor/components/Patients.js";
 import ProfilePatient from "./dashboard_patient/components/Profile.js";
 import DietsPatient from "./dashboard_patient/components/DietsPatient.js";
 import DashMainDoctor from "./dashboard_doctor/components/DashMainDoctor.js";

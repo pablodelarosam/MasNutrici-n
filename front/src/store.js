@@ -6,7 +6,8 @@ import thunk from "redux-thunk";
 import promise from "redux-promise";
 import {loginReducer, loginHasError} from "./login/reducers/login";
 import {signinReducer, signinHasError, signinRequest} from "./authentication/reducers/signin";
-
+import {patientsReducer} from "./dashboard_doctor/reducers/dashboard.js"
+import {requestInfo, requestHasError, receivedGeneralRequestReducer, profileReducer} from "./general_dash/dashreducers";
 
 const enhancers = compose(window.devToolsExtension
     ? window.devToolsExtension()
@@ -22,6 +23,11 @@ export function getStore(history, intialState) {
         signinReducer,
         signinHasError,
         signinRequest,
+        patientsReducer,
+        requestInfo,
+        profileReducer,
+        receivedGeneralRequestReducer,
+        requestHasError,
         routing: routerReducer
     });
 

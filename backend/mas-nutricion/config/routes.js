@@ -37,6 +37,8 @@ module.exports.routes = {
    *                                                                          *
    ***************************************************************************/
    'POST /api/v0/login': 'UserController.login',
-   'POST /api/v0/signup': 'UserController.signup'
-
+   'POST /api/v0/signup': 'UserController.signup',
+   'GET /api/v0/patients/:id': 'UserController.getPatients',
+   'DELETE /api/v0/user/:id': 'UserController.deletePatient',
+   'PUT /api/v0/user/:id': 'UserController.updatePatient',
 };

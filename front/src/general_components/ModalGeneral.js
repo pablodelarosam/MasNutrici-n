@@ -26,7 +26,7 @@ class ModalGeneral extends Component {
             <Footer pad={{
               "vertical": "medium"
             }}>
-              <button className="form-btn">Send</button>
+              <button className="form-btn">Enviar</button>
             </Footer>
           </Form>
         </Box>

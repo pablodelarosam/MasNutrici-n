@@ -13,11 +13,14 @@ import Box from 'grommet/components/Box';
 import NavSidebar from './NavSideBar.js'
 import Split from 'grommet/components/Split';
 import HeaderDash from './Header.js'
+import {bindActionCreators} from 'redux';
+import * as actionCreators from '../actions/dashboard'
+import * as generalActionCreators from '../../general_dash/dashboard'
 
-export class DashMainTutor extends Component {
+
+export class DashMainDoctor extends Component {
 
   render() {
-    const {children} = this.props;
     return (
       <Split fixed={false} separator={false} flex='right'>
         <NavSidebar/>
@@ -27,7 +30,7 @@ export class DashMainTutor extends Component {
           }}>
             <HeaderDash/>
           </div>
-          {children}
+          {React.cloneElement(this.props.children, this.props)}
         </Box>
       </Split>
     );
@@ -35,4 +38,16 @@ export class DashMainTutor extends Component {
 
 }
 
-export default DashMainTutor;
+
+const mapStateToProps = (state, ownProps) => {
+  return {
+    patients: state.patientsReducer.patients,
+    profile_has_change: state.requestInfo,
+    hasError: state.loginHasError,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({...actionCreators, ...generalActionCreators}, dispatch);
+};
+export default connect(mapStateToProps, mapDispatchToProps)(DashMainDoctor);

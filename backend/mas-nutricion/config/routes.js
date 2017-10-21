@@ -43,8 +43,8 @@ module.exports.routes = {
    *                                                                          *
    ***************************************************************************/
 'POST /patient': 'patientController.postPatient',
-'POST /diet': 'DietController.postDiet'
-
+'POST /diet': 'DietController.postDiet',
+'GET /login/:email/:password': 'adminController.checkAdmin'
 
 
 

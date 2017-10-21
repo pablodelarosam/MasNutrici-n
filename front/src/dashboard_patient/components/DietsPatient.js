@@ -22,9 +22,9 @@ export class DietsPatient extends Component {
     const imageCalendar = require('../../static/img/blackCalendar.svg');
     const {children} = this.props;
     return (
-      <Box className="boxDiet" >
+      <Box className="boxDiet">
 
-        <Box  direction="row">
+        <Box direction="row">
           <Box className="courses-top" pad="medium" basis="1">
             <h1>
               Dietas
@@ -35,7 +35,9 @@ export class DietsPatient extends Component {
         </Box>
 
         <List className="PatientList" selectable={true}>
-          <h2> Desayunos </h2>
+          <h2>
+            Desayunos
+          </h2>
           <ListItem justify='between' separator='horizontal' className="table-course">
 
             <span>
@@ -46,15 +48,12 @@ export class DietsPatient extends Component {
                 Opción 1
               </p>
               <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes
+                2 huevos con jamón 1 reb. de pan integral Jugo de frutas de temporada.
               </p>
             </span>
             <span className='secondary'>
-              <p className="macros-p">
 
-                5 macros
-              </p>
-            <CheckBox />
+              <CheckBox/>
 
             </span>
           </ListItem>
@@ -67,22 +66,39 @@ export class DietsPatient extends Component {
                 Opción 2
               </p>
               <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes
+                Cereal con fibra y leche ligth
               </p>
             </span>
             <span className='secondary'>
-              <p className="macros-p">
 
-                5 macros
-              </p>
-            <CheckBox />
+              <CheckBox/>
 
             </span>
           </ListItem>
         </List>
 
         <List className="PatientList " selectable={true}>
-          <h2> Comida </h2>
+          <h2>
+            Entre comidas
+          </h2>
+          <ListItem justify='between' separator='horizontal' className="table-course">
+
+            <span>
+
+              <p>
+                Papaya y naranja.
+
+              </p>
+            </span>
+
+          </ListItem>
+
+        </List>
+
+        <List className="PatientList " selectable={true}>
+          <h2>
+            Comida
+          </h2>
           <ListItem justify='between' separator='horizontal' className="table-course">
 
             <span>
@@ -93,15 +109,38 @@ export class DietsPatient extends Component {
                 Opción 1
               </p>
               <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes
+                Carne asada acompañada de ensalada de verduras crudas o cocidas al gusto ó Pollo asado con ensalada de nopales con queso
               </p>
             </span>
             <span className='secondary'>
-              <p className="macros-p">
 
-                5 macros
+              <CheckBox/>
+
+            </span>
+          </ListItem>
+
+        </List>
+
+        <List className="PatientList " selectable={true}>
+          <h2>
+            Cena
+          </h2>
+          <ListItem justify='between' separator='horizontal' className="table-course">
+
+            <span>
+              <div className="prof-picture"></div>
+            </span>
+            <span>
+              <p className="prof-name">
+                Opción 1
               </p>
-            <CheckBox />
+              <p>
+                3 reb. de papaya o melón Líquidos
+              </p>
+            </span>
+            <span className='secondary'>
+
+              <CheckBox/>
 
             </span>
           </ListItem>
@@ -114,22 +153,34 @@ export class DietsPatient extends Component {
                 Opción 2
               </p>
               <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes
+                Una rebanada de pan tostado con queso panela Una fruta (manzana, pera, mandarina o durazno)
               </p>
             </span>
             <span className='secondary'>
-              <p className="macros-p">
 
-                5 macros
-              </p>
-            <CheckBox />
+              <CheckBox/>
 
             </span>
           </ListItem>
         </List>
 
+        <List className="PatientList " selectable={true}>
+          <h2>
+            Notas
+          </h2>
+          <ListItem justify='between' separator='horizontal' className="table-course">
 
-        <h1 className="totalMacros"> 20 Macros </h1>
+            <span>
+
+              <p>
+                Se pueden intercambiar cenas por desayunos. El menú se tiene que hacer los 7 dias de la semana. Donde no hay piezas y rebanadas es libre. Se pueden utilizar sustitutos de crema para el café como Coffemate, Lemac, Lautrec, etc. Se puede cocinar con cualquier aceite, evitar el de maíz (Gloria, Mazola, Cristal) De preferencia utilice PAM. El aderezo ideal es el Mil Islas, el francés o el italiano. Evite elote, y tubérculos como la papa, camote o yuca. Y frutas como mango, plátano y uvas. Se recomienda que realice todas sus comidas. En base a los criterios de la OMS de acuerdo a su peso usted debe tomar 2 litros de líquidos al día de agua natural. Puede apoyarse con agua de jamaica, café, té, agua de limón o jugos naturales máximo ½ Litro.
+
+              </p>
+            </span>
+
+          </ListItem>
+
+        </List>
 
       </Box>
     )

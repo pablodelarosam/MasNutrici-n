@@ -16,6 +16,8 @@ export class Status extends Component {
 
   render() {
     const imageCalendar = require('../../static/img/blackCalendar.svg');
+    const imageMass = require('../../static/img/strong.svg');
+    const imageRule = require('../../static/img/ruler.svg');
 
     const {children} = this.props;
 
@@ -89,7 +91,7 @@ export class Status extends Component {
       }
 
       return (
-        <Box>
+        <Box align="center" className="status">
           <h1>Estado</h1>
           <Box direction="row">
             <Box className="box-right-info" pad="medium" basis="1/4">
@@ -111,44 +113,45 @@ export class Status extends Component {
 
           <Box direction="row">
             <Box className="box-right-info" pad="medium" basis="1/4">
-              <div className="card">
-
+              <div className="card-status">
+              <Image src={imageMass} size='small'/>
                 <h1 className="headstatus">
                   Grasa
                 </h1>
-                <h1 className="headstatus">
+                <h2 className="headstatus">
                   200
-                </h1>
+                </h2>
               </div>
             </Box>
 
             <Box className="box-right-info" pad="medium" basis="1/4">
-              <div className="card">
-
+              <div className="card-status">
+              <Image src={imageMass} size='small'/>
                 <h1 className="headstatus">
                   Masa
                 </h1>
-                <h1 className="headstatus">
+                <h2 className="headstatus">
                   200
-                </h1>
+                </h2>
               </div>
             </Box>
 
             <Box className="box-right-info" pad="medium" basis="1/4">
-              <div className="card">
+              <div className="card-status">
+              <Image src={imageRule} size='small'/>
 
                 <h1 className="headstatus">
                   Cm
                 </h1>
-                <h1 className="headstatus">
+                <h2 className="headstatus">
                   200
-                </h1>
+                </h2>
               </div>
             </Box>
 
           </Box>
 
-          <div className="card">
+          <div className="card-graphic">
 
             <h1 className="headstatus">Peso</h1>
             <Line width={700} height={300} data={charData} />

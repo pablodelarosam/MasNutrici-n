@@ -168,7 +168,7 @@ export class Home extends Component {
                                           </Box>
                                           <Box pad="medium" basis="1/2">
                                           <Paragraph margin="none">
-                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                            fabian@gmail.com
                                           </Paragraph>
                                           </Box>
 
@@ -183,7 +183,11 @@ export class Home extends Component {
                                           </Box>
                                           <Box pad="medium" basis="1/2">
                                           <Paragraph margin="none">
-                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                            Tel: 636 87 41
+                                          </Paragraph>
+
+                                          <Paragraph margin="none">
+                                            Movil: 2223330155
                                           </Paragraph>
                                           </Box>
 
@@ -198,7 +202,7 @@ export class Home extends Component {
                                           </Box>
                                           <Box pad="medium" basis="1/2">
                                           <Paragraph margin="none">
-                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                          Privada 10 B Poniente No.2921 Col San Alejandro Puebla, Pue.
                                           </Paragraph>
                                           </Box>
 

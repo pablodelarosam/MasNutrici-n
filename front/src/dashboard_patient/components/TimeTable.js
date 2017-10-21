@@ -9,9 +9,10 @@ import Split from 'grommet/components/Split';
 import Box from 'grommet/components/Box';
 import events from '../events.js';
 import Line from 'react-chartjs';
-//import TimePicker from 'rc-time-picker';
+import TimePicker from 'rc-time-picker';
 import CheckBox from 'grommet/components/CheckBox';
-//import {SingleDatePicker} from 'react-dates';
+import {SingleDatePicker} from 'react-dates';
+//import SingleDatePicker from '../src/components/SingleDatePicker';
 import Paragraph from 'grommet/components/Paragraph';
 import ModalGeneral from '../../general_components/ModalGeneral.js';
 //import serializeForm from 'form-serialize';
@@ -19,11 +20,25 @@ import ModalGeneral from '../../general_components/ModalGeneral.js';
 BigCalendar.setLocalizer(BigCalendar.momentLocalizer(moment));
 BigCalendar.views = ['month', 'day', 'week'];
 
+const format = 'h:mm a';
+const now = moment().hour(0).minute(0);
+
 export class TimeTablePatient extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      openLayer: false
+      openLayer: false,
+      timetable: [],
+      currentMood: 'No habilitado',
+    checkMood: false,
+    focused: props.autoFocus,
+    date: props.initialDate,
+    start_date_opt: moment(),
+    end_date_opt: moment(),
+    focused_start: false,
+    focused_end: false,
+    numTimeTo: [now],
+    numTimeFrom: [now]
     };
   }
 
@@ -35,16 +50,51 @@ export class TimeTablePatient extends Component {
   onCloseLayer() {
     this.setState({"openLayer": false});
   }
+  // Get filter changes to modify the query
+changeOpts(e, type) {
+  // switch (type) {
+  //   case "start_date":
+  //     this.setState({
+  //       "start_date_opt": e
+  //     }, () => this.props.getQueryData(this.state));
+  //     break;
+  //   case "end_date":
+  //     this.setState({
+  //       "end_date_opt": e
+  //     }, () => this.props.getQueryData(this.state));
+  //     break;
+  // }
+}
 
   render() {
     const {children} = this.props;
     const allViews = Object.keys(BigCalendar.views).map(k => BigCalendar.views[k])
+    const {focused, date} = this.state;
+
+  const defaultProps = {
+    // input related props
+    placeholder: 'Fecha Inicial',
+    disabled: false,
+    required: false,
+
+    // calendar presentation and interaction related props
+    numberOfMonths: 1,
+    isOutsideRange: () => false,
+    enableOutsideDays: true,
+    keepOpenOnDateSelect: true,
+    reopenPickerOnClearDate: true
+  }
+
 
     return (
       <Box className="TimeTable">
         {this.state.openLayer && (
           <ModalGeneral title="Agendar cita" showClosed={true} closeDialog={() => this.onCloseLayer()} handleSubmit={(e) => this.handleSubmit(e)}>
-            <Box>  </Box>
+            <Box>
+            {this.state.numTimeTo.map((time, i) => (
+                  <TimePicker key={i} name="timeTo" showSecond={false} defaultValue={time} className="xxx" onChange={this.changeOpts()} format={format} use12Hours/>
+                ))}
+              </Box>
           </ModalGeneral>
         )}
         <h1>Calendario</h1>

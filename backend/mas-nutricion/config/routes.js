@@ -31,21 +31,12 @@ module.exports.routes = {
   * `assets` directory)                                                      *
   *                                                                          *
   ***************************************************************************/
-
-  '/': {
-    view: 'homepage'
-  },
-  //'/patient': "patientController.postPatient"
-
   /***************************************************************************
    *                                                                          *
                               API RESTFUL
    *                                                                          *
    ***************************************************************************/
-'POST /patient': 'patientController.postPatient',
-'POST /diet': 'DietController.postDiet',
-'GET /login/:email/:password': 'adminController.checkAdmin'
-
-
+   'POST /api/v0/login': 'UserController.login',
+   'POST /api/v0/signup': 'UserController.signup'
 
 };

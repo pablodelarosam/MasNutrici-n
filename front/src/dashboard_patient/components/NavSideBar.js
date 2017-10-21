@@ -14,6 +14,26 @@ import Image from 'grommet/components/Image';
 
 export class NavSidebar extends Component {
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      user: {}
+    };
+  }
+
+  componentDidMount() {
+    // Set user info
+    this.setState({
+      'user': JSON.parse(sessionStorage.getItem('user'))
+    });
+  }
+
+  removeSession() {
+    sessionStorage.removeItem('user');
+  }
+
+
   render() {
     const imageFace = require('../../static/img/facw.svg');
     const imageFeed = require('../../static/img/feed.svg');
@@ -28,7 +48,7 @@ export class NavSidebar extends Component {
         <Box className="box-profile-nav " flex='grow' justify='start'>
           <Image className="img-title" src={imageFace} size="small"/>
           <h3>
-            Felipe
+            {this.state.user.full_name}
           </h3>
           <p>
             Navigation
@@ -53,7 +73,7 @@ export class NavSidebar extends Component {
               <Image className="menu-img img-margin" src={imageCalendar}/>
               Citas
             </Anchor>
-            <Anchor href='/'>
+            <Anchor href='/' onClick={() => this.removeSession()}>
               <Image className="menu-img img-margin" src={imageCancel}/>
               Cerrar Sesion
             </Anchor>

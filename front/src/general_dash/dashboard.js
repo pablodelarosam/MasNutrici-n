@@ -89,6 +89,7 @@ export function updateProfile(userId, data) {
 
 
 export function createProfile(data) {
+    console.log("DATA", data)
     // Sparse Data
     return function(dispatch) {
         axios({
@@ -97,11 +98,13 @@ export function createProfile(data) {
             responseType: 'json',
             data: data
         }).then(function(response) {
+          console.log("RESPONSE", response)
           let data = response.data;
           if(data.status == 200) {
             dispatch(updatedProfile(true))
           }
         }).catch(function(response) {
+          console.log("Error", response)
             dispatch(receiveError(true));
         })
     }

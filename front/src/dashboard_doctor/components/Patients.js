@@ -40,7 +40,8 @@ export class Patients extends Component {
         "alergies": "",
         "smokes": "",
         "drinker": "",
-        "gender": ""
+        "gender": "",
+        "password": ""
       },
       selected_patient: ""
     };
@@ -78,7 +79,7 @@ export class Patients extends Component {
 
   createPatient() {
     this.onOpenLayer();
-    setState({
+    this.setState({
       profile: {
         "full_name": "",
         "email": "",
@@ -93,7 +94,8 @@ export class Patients extends Component {
         "alergies": "",
         "smokes": "",
         "drinker": "",
-        "gender": ""
+        "gender": "",
+        "password": ""
       },
       selected_patient: ""
     })
@@ -111,6 +113,8 @@ export class Patients extends Component {
     if (this.state.selected_patient !== "") {
       this.props.updateProfile(this.state.selected_patient, values);
     } else {
+      values['role'] = "patient";
+      values['doctor_id'] = this.state.user.id;
       this.props.createProfile(values);
     }
 
@@ -137,6 +141,9 @@ export class Patients extends Component {
             <FormField className="field" label='Email'>
               <TextInput name="email" defaultValue={this.state.profile.email}/>
             </FormField>
+            <FormField className="field" label='Password'>
+              <TextInput name="password" defaultValue={this.state.profile.password}/>
+            </FormField>
           </div>
           <div className="formfield-tutor">
             <FormField className="field" label='Edad'>
@@ -152,7 +159,7 @@ export class Patients extends Component {
               <TextInput name="initial_weight" defaultValue={this.state.profile.initial_weight}/>
             </FormField>
             <FormField className="field" label='Peso Ideal'>
-              <TextInput name="living_state" defaultValue={this.state.profile.ideal_weight}/>
+              <TextInput name="ideal_weight" defaultValue={this.state.profile.ideal_weight}/>
             </FormField>
           </div>
           <div className="formfield-tutor">
@@ -186,6 +193,9 @@ export class Patients extends Component {
     return (
       <Box>
         <h1>Pacientes</h1>
+        <button onClick={() => this.createPatient()}>
+          Agregar Paciente
+        </button>
         <Table className="tableProfile" selectable={true}>
           <thead>
             <tr>

@@ -18,6 +18,7 @@ export class Status extends Component {
     const imageCalendar = require('../../static/img/blackCalendar.svg');
     const imageMass = require('../../static/img/strong.svg');
     const imageRule = require('../../static/img/ruler.svg');
+    const imageFat = require('../../static/img/cauldron.svg');
 
     const {children} = this.props;
 
@@ -111,10 +112,10 @@ export class Status extends Component {
             </Box>
           </Box>
 
-          <Box direction="row">
+          <Box className="status-info" direction="row">
             <Box className="box-right-info" pad="medium" basis="1/4">
               <div className="card-status">
-              <Image src={imageMass} size='small'/>
+              <Image src={imageFat} size='small'/>
                 <h1 className="headstatus">
                   Grasa
                 </h1>

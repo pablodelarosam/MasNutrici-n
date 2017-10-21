@@ -80,7 +80,7 @@ text-align: center;
     margin-top: 5%;
     border-color: #fc3d02 !important;
     width: 40%;
-    margin-right: 14%;
+    margin-right: 2%;
   }
 
   .seeButton {
@@ -91,7 +91,7 @@ text-align: center;
     margin-top: 5%;
     border-color: royalblue !important;
     width: 40%;
-    margin-right: 14%;
+    margin-right: 1%;
   }
 
 
@@ -598,13 +598,13 @@ span {
   }
 
   h1 {
-    font-size: 46px;
-display: inline !important;
+    font-size: 40px;
+//display: inline !important;
   }
 
   img {
-    width: 13% !important;
-margin-top: -7%;
+    width: 23% !important;
+
   }
 }
 
@@ -1030,6 +1030,20 @@ button:hover {
 
 .status {
   width: 100% !important;
+
+  .status-info {
+    width: 100% !important;
+margin: auto !important;
+margin-left: 24% !important;
+  }
+}
+
+.adddiet {
+      margin: auto !important;
+      &:hover {
+        background: #6920f9 !important;
+        color: white !important;
+      }
 }
 
 

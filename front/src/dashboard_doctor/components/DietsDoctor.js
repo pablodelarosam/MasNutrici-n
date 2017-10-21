@@ -85,7 +85,9 @@ export class DietsDoctor extends Component {
 
           </div>
           <SearchInput className="searchInp" placeHolder='Buscar' suggestions={undefined}/>
+          <button className="adddiet"> + Agregar dieta </button>
           <div className="patient-info" >
+
           <Box id="patiend-details"  style={{}} size={{
             width: {
               max: "xxlarge"

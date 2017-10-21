@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react'
 import {connect} from 'react-redux'
-
+import Columns from 'grommet/components/Columns';
 import {dashboard} from '../actions/dashboard'
 import Split from 'grommet/components/Split';
 import Box from 'grommet/components/Box';
@@ -15,6 +15,10 @@ import Footer from 'grommet/components/Footer';
 import TextInput from 'grommet/components/TextInput';
 import SearchInput from 'grommet/components/SearchInput';
 import Section from 'grommet/components/Section';
+import Table from 'grommet/components/Table';
+import TableRow from 'grommet/components/TableRow';
+import List from 'grommet/components/List';
+import ListItem from 'grommet/components/ListItem';
 
 export class DietsDoctor extends Component {
 
@@ -76,44 +80,90 @@ export class DietsDoctor extends Component {
     return (
       <Box>
         <Box>
-        <div className="inline-session">
-          <h1>Dietas</h1>
+          <div className="inline-session">
+            <h1>Dietas</h1>
 
           </div>
-          <SearchInput className="searchInp" placeHolder='Buscar'
-          suggestions={undefined} />
-          <div>
+          <SearchInput className="searchInp" placeHolder='Buscar' suggestions={undefined}/>
+          <div className="patient-info" >
+          <Box id="patiend-details"  style={{}} size={{
+            width: {
+              max: "xxlarge"
+            }
+          }} direction="row">
+            <Box pad="medium" basis="1/8">
             <div className="card">
-                <div className="inline-session-top-image">
-              <Image src={imageIdea} size='small'/>
-                <div className="inline-session-top ">
-              <button type="button" className="seeButton"><a href="/dashboard/doctor/detalles"> Ver </a></button>
-                <button type="button" className="removeButton">Eliminar</button>
-                </div>
-                </div>
-              <h3 margin="none">
-                Dieta 1
-              </h3>
-              <Paragraph margin="none">
-                Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor
-              </Paragraph>
-            </div>
-            <div className="card">
-            <div className="inline-session-top-image">
-          <Image src={imageIdea} size='small'/>
-            <div className="inline-session-top ">
-          <button type="button" className="seeButton" href="/dashboard/doctor/detalles">Ver</button>
-            <button type="button" className="removeButton">Eliminar</button>
-            </div>
-            </div>
-              <h3 margin="none">
-                Dieta 2
-              </h3>
-              <Paragraph margin="none">
-                Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor Lorem impsum dolor
-              </Paragraph>
-            </div>
+              <div className="inline-session-top-image">
+                <Image src={imageIdea} size='small'/>
 
+
+              </div>
+              <h3 margin="none">
+                Y1
+              </h3>
+
+              <div className="inline-session-top ">
+              <button type="button" className="seeButton" href="/dashboard/doctor/detalles"><a href="/dashboard/doctor/detalles">Ver </a></button>
+              <button type="button" className="removeButton">Eliminar</button>
+              </div>
+
+
+            </div>
+            </Box>
+            <Box pad="medium" basis="1/8">
+            <div className="card">
+              <div className="inline-session-top-image">
+                <Image src={imageIdea} size='small'/>
+
+              </div>
+              <h3 margin="none">
+                Z3
+              </h3>
+              <div className="inline-session-top ">
+                <button type="button" className="seeButton" href="/dashboard/doctor/detalles">Ver</button>
+                <button type="button" className="removeButton">Eliminar</button>
+              </div>
+            </div>
+            </Box>
+
+            <Box pad="medium" basis="1/8">
+            <div className="card">
+              <div className="inline-session-top-image">
+                <Image src={imageIdea} size='small'/>
+
+              </div>
+              <h3 margin="none">
+                Z3
+              </h3>
+
+              <div className="inline-session-top ">
+                <button type="button" className="seeButton" href="/dashboard/doctor/detalles">Ver</button>
+                <button type="button" className="removeButton">Eliminar</button>
+              </div>
+
+            </div>
+            </Box>
+
+            <Box pad="medium" basis="1/8">
+
+                        <div className="card">
+                          <div className="inline-session-top-image">
+                            <Image src={imageIdea} size='small'/>
+
+                          </div>
+                          <h3 margin="none">
+                            U1
+                          </h3>
+
+                          <div className="inline-session-top ">
+                            <button type="button" className="seeButton" href="/dashboard/doctor/detalles"><a href="/dashboard/doctor/detalles">Ver </a></button>
+                            <button type="button" className="removeButton">Eliminar</button>
+                          </div>
+
+                        </div>
+            </Box>
+
+            </Box>
 
 
 

@@ -26,7 +26,7 @@ export class NavSidebar extends Component {
 
     return (
 
-      <Sidebar className="sideBarDoctor" colorIndex='neutral-4' fixed={true} size='medium'>
+      <Sidebar className="sideBarDoctor" colorIndex='neutral-4'  size='medium'>
         <Header pad='medium' justify='between'>
           <Title className="title-dash"></Title>
         </Header>

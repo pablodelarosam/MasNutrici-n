@@ -6,6 +6,7 @@ import {Router, browserHistory} from 'react-router'
 import {syncHistoryWithStore} from 'react-router-redux'
 
 import 'babel-polyfill';
+import 'react-dates/initialize';
 
 /* Import our data store */
 import {getStore} from './store.js'

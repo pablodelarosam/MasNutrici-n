@@ -14,7 +14,7 @@ import CheckBox from 'grommet/components/CheckBox';
 import {SingleDatePicker} from 'react-dates';
 import Paragraph from 'grommet/components/Paragraph';
 import ModalGeneral from '../../general_components/ModalGeneral.js';
-//import serializeForm from 'form-serialize';
+import serializeForm from 'form-serialize';
 
 BigCalendar.setLocalizer(BigCalendar.momentLocalizer(moment));
 BigCalendar.views = ['month', 'day', 'week'];
@@ -51,18 +51,47 @@ export class TimeTablePatient extends Component {
   }
   // Get filter changes to modify the query
   changeOpts(e, type) {
-    // switch (type) {
-    //   case "start_date":
-    //     this.setState({
-    //       "start_date_opt": e
-    //     }, () => this.props.getQueryData(this.state));
-    //     break;
-    //   case "end_date":
-    //     this.setState({
-    //       "end_date_opt": e
-    //     }, () => this.props.getQueryData(this.state));
-    //     break;
-    // }
+    switch (type) {
+      case "start_date":
+        this.setState({
+          "start_date_opt": e
+        });
+        break;
+      case "end_date":
+        this.setState({
+          "end_date_opt": e
+        });
+        break;
+    }
+  }
+
+
+  handleSubmit(e) {
+    e.preventDefault()
+    let values = serializeForm(e.target, {hash: true});
+    console.log(values);
+    console.log("EVENTS", events);
+    events.push(values)
+console.log("EVENTS", events);
+  //vents.push("Gerardo" + this.state.start_date_opt)
+
+
+
+    // var sessions = this.props.sessions.slice();
+    // var pos = this.state.currentPos;
+    // Object.keys(values).map(function(key, index) {
+    //   values[key] = parseInt(values[key]);
+    // });
+    //
+    // if (pos > -1)
+    //   sessions[pos] = {...sessions[pos], ...values};
+    //
+    // sessions = pos === -1
+    //   ? [values].concat(sessions)
+    //   : sessions;
+    //
+    // this.props.updateSessionsPlans(this.state.user.id, sessions);
+    this.onCloseLayer();
   }
 
   render() {
@@ -87,7 +116,7 @@ export class TimeTablePatient extends Component {
     return (
       <Box className="TimeTable">
         {this.state.openLayer && (
-          <ModalGeneral title="Agendar cita" showClosed={true} closeDialog={() => this.onCloseLayer()} handleSubmit={(e) => this.handleSubmit(e)}>
+          <ModalGeneral  title="Agendar cita" showClosed={true} closeDialog={() => this.onCloseLayer()} handleSubmit={(e) => this.handleSubmit(e)}>
             <Box>
             <SingleDatePicker {...defaultProps} id="start_date" date={this.state.start_date_opt} // momentPropTypes.momentObj or null
                     onDateChange={(e) => this.changeOpts(e, 'start_date')} // PropTypes.func.isRequired
@@ -98,6 +127,8 @@ export class TimeTablePatient extends Component {
             </Box>
           </ModalGeneral>
         )}
+
+
         <h1>Calendario</h1>
         <button onClick={() => this.onOpenLayer()}>
           Agendar cita

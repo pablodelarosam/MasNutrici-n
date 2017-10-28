@@ -19,6 +19,8 @@ import Table from 'grommet/components/Table';
 import TableRow from 'grommet/components/TableRow';
 import List from 'grommet/components/List';
 import ListItem from 'grommet/components/ListItem';
+import Diets from '../../general_dash/timetableEvents.js';
+import {Link} from 'react-router';
 
 export class DietsDoctor extends Component {
 
@@ -40,6 +42,7 @@ export class DietsDoctor extends Component {
   }
 
   render() {
+    console.log("DIETS",Diets);
     const {children} = this.props;
     const imageIdea = require('../../static/img/news.svg');
 
@@ -93,6 +96,8 @@ export class DietsDoctor extends Component {
               max: "xxlarge"
             }
           }} direction="row">
+          {Diets.map((diets) => (
+
             <Box pad="medium" basis="1/8">
             <div className="card">
               <div className="inline-session-top-image">
@@ -101,69 +106,23 @@ export class DietsDoctor extends Component {
 
               </div>
               <h3 margin="none">
-                Y1
+                {diets.title}
               </h3>
 
               <div className="inline-session-top ">
-              <button type="button" className="seeButton" href="/dashboard/doctor/detalles"><a href="/dashboard/doctor/detalles">Ver </a></button>
+              <button type="button" className="seeButton" href="/dashboard/doctor/detalles"><Link to={`/dashboard/doctor/detalles/${diets.id}`} activeClassName="active">Ver</Link></button>
               <button type="button" className="removeButton">Eliminar</button>
               </div>
 
 
             </div>
             </Box>
-            <Box pad="medium" basis="1/8">
-            <div className="card">
-              <div className="inline-session-top-image">
-                <Image src={imageIdea} size='small'/>
+))}
 
-              </div>
-              <h3 margin="none">
-                Z3
-              </h3>
-              <div className="inline-session-top ">
-                <button type="button" className="seeButton" href="/dashboard/doctor/detalles">Ver</button>
-                <button type="button" className="removeButton">Eliminar</button>
-              </div>
-            </div>
-            </Box>
 
-            <Box pad="medium" basis="1/8">
-            <div className="card">
-              <div className="inline-session-top-image">
-                <Image src={imageIdea} size='small'/>
 
-              </div>
-              <h3 margin="none">
-                Z3
-              </h3>
 
-              <div className="inline-session-top ">
-                <button type="button" className="seeButton" href="/dashboard/doctor/detalles">Ver</button>
-                <button type="button" className="removeButton">Eliminar</button>
-              </div>
 
-            </div>
-            </Box>
-
-            <Box pad="medium" basis="1/8">
-
-                        <div className="card">
-                          <div className="inline-session-top-image">
-                            <Image src={imageIdea} size='small'/>
-
-                          </div>
-                          <h3 margin="none">
-                            U1
-                          </h3>
-
-                          <div className="inline-session-top ">
-                            <button type="button" className="seeButton" href="/dashboard/doctor/detalles"><a href="/dashboard/doctor/detalles">Ver </a></button>
-                            <button type="button" className="removeButton">Eliminar</button>
-                          </div>
-
-                        </div>
-            </Box>
 
             </Box>
 

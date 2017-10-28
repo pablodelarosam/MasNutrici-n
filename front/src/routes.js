@@ -40,7 +40,7 @@ export const getRoutes = (store) =>
     <Route path="pacientes" component={Patients}/>
     <Route path="dietas" component={DietsDoctor} />
     <Route path="timetable" component={TimeTableDoctor}/>
-    <Route path="detalles" component={DietDetails}/>
+    <Route path="detalles/:id" component={DietDetails}/>
 
   </Route>
 

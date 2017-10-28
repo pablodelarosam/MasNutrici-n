@@ -15,7 +15,7 @@ class ModalGeneral extends Component {
     }
     return (
       <Layer className="no-padding" closer={closed} onClose={() => this.props.closeDialog()}>
-        <Box className="no-padding">
+        <Box className="modal-timetable  no-padding">
           <Form className="tutor-form" onSubmit={(e) => this.props.handleSubmit(e) }>
             <Header className="modal-style">
               <Heading>

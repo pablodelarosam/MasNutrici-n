@@ -1026,6 +1026,9 @@ button:hover {
   background: #6920f9 !important;
   color: white;
 }
+.single-date {
+  margin-bottom: 5% !important;
+}
   }
 
 .status {
@@ -1049,4 +1052,81 @@ margin-left: 24% !important;
 
 #patiend-details {
   display: -webkit-inline-box !important;
+}
+
+.modal-timetable {
+  width: 900px;
+  height: 650px;
+  text-align: -webkit-center;
+}
+
+.SingleDatePickerInput {
+    background-color: #fff;
+    border: 3px solid #dbdbdb;
+    margin-bottom: 15% !important;
+    margin-top: 5% !important;
+}
+
+.CalendarDay_button {
+    position: relative !important;
+    height: 100% !important;
+    width: 100% !important;
+    text-align: center !important;
+    background: 0 0 !important;
+    border: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: inherit !important;
+    font: inherit !important;
+    line-height: normal !important;
+    overflow: visible !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    cursor: pointer !important;
+    min-width: initial !important;
+    max-width: initial !important;
+}
+
+.DayPickerNavigation_button__horizontal {
+    border-radius: 3px !important;
+    padding: 6px 9px !important;
+    top: 18px !important;
+    position: absolute !important;
+    border: none !important;
+    min-width: initial !important;
+    max-width: initial !important;
+    padding: 0 !important;
+    color: inherit !important;
+    font: inherit !important;
+    line-height: normal !important;
+    overflow: visible !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    cursor: pointer !important;
+}
+
+.rc-time-picker-input {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    padding: 4px 7px;
+    height: 28px;
+    cursor: text;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #666;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    transition: border 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    text-align: center !important;
+}
+
+.DayPickerKeyboardShortcuts_show__bottomRight {
+    border: none !important;
+    border-top: 26px solid transparent !important;
+    border-right: 33px solid #00a699 !important;
+    bottom: 0;
+    right: 0;
 }

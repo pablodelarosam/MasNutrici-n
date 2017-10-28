@@ -193,7 +193,7 @@ export class Patients extends Component {
     return (
       <Box>
         <h1>Pacientes</h1>
-        <button onClick={() => this.createPatient()}>
+        <button className="add-patient" onClick={() => this.createPatient()}>
           Agregar Paciente
         </button>
         <Table className="tableProfile" selectable={true}>

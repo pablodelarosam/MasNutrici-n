@@ -21,16 +21,36 @@ import List from 'grommet/components/List';
 import ListItem from 'grommet/components/ListItem';
 import Diets from '../../general_dash/timetableEvents.js';
 import {Link} from 'react-router';
+import ModalGeneral from '../../general_components/ModalGeneral.js';
+import serializeForm from 'form-serialize';
 
 export class DietsDoctor extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      openLayer: false
+      openLayer: false,
+      change: false,
+      diet: {
+        "id": 1000,
+        "title": "",
+        "meals": [
+          {
+            "title": "Desayuno",
+            "options": [""]
+          }, {
+            "title": "Entre Comidas",
+            "options": [""]
+          }, {
+            "title": "Comidas",
+            "options": [""]
+          }, {
+            "title": "Cena",
+            "options": [""]
+          }
+        ]
+      }
     };
-    console.log(this.state);
-
   }
 
   onOpenLayer(e) {
@@ -41,94 +61,102 @@ export class DietsDoctor extends Component {
     this.setState({openLayer: false});
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    const values = serializeForm(e.target, {hash: true});
+    var new_meal = {
+      "id": 4,
+      "title": values["title"],
+      "meals": [
+        {
+          "title": "Desayuno",
+          "options": [values["breakfast"]]
+        }, {
+          "title": "Entre Comidas",
+          "options": [values["lunch"]]
+        }, {
+          "title": "Comidas",
+          "options": [values["late_lunch"]]
+        }, {
+          "title": "Cena",
+          "options": [values["dinner"]]
+        }
+      ]
+
+    }
+
+    Diets.push(new_meal);
+    this.onCloseLayer();
+  }
+
+  removeDiet(pos) {
+    Diets.pop();
+    this.setState({change: true});
+  }
+
   render() {
-    console.log("DIETS",Diets);
     const {children} = this.props;
-    const imageIdea = require('../../static/img/news.svg');
+    const imageIdea = require('../../static/img/cereal.svg');
 
     var layerNode;
     if (this.state.openLayer) {
       layerNode = (
-        <Layer closer={true} onClose={this.onCloseLayer.bind(this)}>
-          <Box pad='medium'>
-            <Form>
-              <Header>
-                <Heading>
-                  Session Editor
-                </Heading>
-              </Header>
-              <FormField label='Session Name'>
-                <TextInput/>
-              </FormField>
-              <FormField label='Price'>
-                <TextInput/>
-              </FormField>
-              <FormField label='Duration'>
-                <TextInput/>
-              </FormField>
-              <FormField label='Description'>
-                <TextInput/>
-              </FormField>
-              <Footer pad={{
-                "vertical": "medium"
-              }}>
-                <button>Send</button>
-              </Footer>
-            </Form>
+        <ModalGeneral title="Dieta" showClosed={true} closeDialog={() => this.onCloseLayer()} handleSubmit={(e) => this.handleSubmit(e)}>
+          <div className="formfield-tutor">
 
-          </Box>
-        </Layer>
+            <FormField label='Nombre de la Dieta'>
+              <TextInput name="title" defaultValue={this.state.diet.title}/>
+            </FormField>
+            <FormField label='Desayuno'>
+              <TextInput name="breakfast" defaultValue={this.state.diet.meals[0].options[0]}/>
+            </FormField>
+            <FormField label='Entre Comidas'>
+              <TextInput name="lunch" defaultValue={this.state.diet.meals[1].options[0]}/>
+            </FormField>
+            <FormField label='Comida'>
+              <TextInput name="late_lunch" defaultValue={this.state.diet.meals[2].options[0]}/>
+            </FormField>
+            <FormField label='Cena'>
+              <TextInput name="dinner" defaultValue={this.state.diet.meals[3].options[0]}/>
+            </FormField>
+          </div>
+        </ModalGeneral>
       );
     }
     return (
       <Box>
-        <Box>
-          <div className="inline-session">
-            <h1>Dietas</h1>
+        <div className="inline-session">
+          <h1>Dietas</h1>
 
-          </div>
-          <SearchInput className="searchInp" placeHolder='Buscar' suggestions={undefined}/>
-          <button className="adddiet"> + Agregar dieta </button>
-          <div className="patient-info" >
+        </div>
+        <button className="adddiet" onClick={() => this.onOpenLayer()}>
+          + Agregar dieta
+        </button>
 
-          <Box id="patiend-details"  style={{}} size={{
-            width: {
-              max: "xxlarge"
-            }
-          }} direction="row">
-          {Diets.map((diets) => (
+        <Box size='medium' direction="row" justify='center'>
+          {Diets.map((diets, i) => (
 
-            <Box pad="medium" basis="1/8">
-            <div className="card">
-              <div className="inline-session-top-image">
-                <Image src={imageIdea} size='small'/>
+            <Box align='center' pad='medium' margin='small' key={i}>
+              <div className="card">
+                <div className="inline-session-top-image">
+                  <img src={imageIdea} width="100px"/>
 
+                </div>
+                <h3>
+                  {diets.title}
+                </h3>
+
+                <div className="inline-session-top ">
+                  <button type="button" className="seeButton" href="/dashboard/doctor/detalles">
+                    <Link to={`/dashboard/doctor/detalles/${diets.id}`} activeClassName="active">Ver</Link>
+                  </button>
+                  <button type="button" className="removeButton" onClick={() => this.removeDiet(i)}>Eliminar</button>
+                </div>
 
               </div>
-              <h3 margin="none">
-                {diets.title}
-              </h3>
-
-              <div className="inline-session-top ">
-              <button type="button" className="seeButton" href="/dashboard/doctor/detalles"><Link to={`/dashboard/doctor/detalles/${diets.id}`} activeClassName="active">Ver</Link></button>
-              <button type="button" className="removeButton">Eliminar</button>
-              </div>
-
-
-            </div>
             </Box>
-))}
+          ))}
 
-
-
-
-
-
-            </Box>
-
-
-
-          </div>
         </Box>
         {layerNode}
       </Box>

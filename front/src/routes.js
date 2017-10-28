@@ -39,7 +39,7 @@ export const getRoutes = (store) =>
   <IndexRoute component={Patients}/>
     <Route path="pacientes" component={Patients}/>
     <Route path="dietas" component={DietsDoctor} />
-    <Route path="timetable" component={TimeTableDoctor}/>
+    <Route path="timetable" component={TimeTablePatient}/>
     <Route path="detalles/:id" component={DietDetails}/>
 
   </Route>

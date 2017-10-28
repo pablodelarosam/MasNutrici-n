@@ -18,6 +18,22 @@ import TableRow from 'grommet/components/TableRow';
 import Select from 'grommet/components/Select';
 
 export class ProfilePatient extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      user: {}
+    };
+  }
+
+  componentDidMount() {
+    // Set user info
+    this.setState({
+      'user': JSON.parse(sessionStorage.getItem('user'))
+    });
+  }
+
   render() {
     const {children} = this.props;
     const imageIdea = require('../../static/img/idea.svg');
@@ -28,7 +44,7 @@ export class ProfilePatient extends Component {
         <Box className="box-profile-top " align='center' pad='medium' margin='small' colorIndex='light-2'>
           <Image src={imageFace} size="small"/>
           <h1 className="head-profile-top">
-            Felipe
+            {this.state.user.full_name}
           </h1>
           <Box className="patient-info" style={{}} size={{
             width: {
@@ -49,11 +65,7 @@ export class ProfilePatient extends Component {
             <Box pad="medium" basis="1/2">
 
               <Paragraph margin="none" className="password">
-                contacto.craftcode@gmail.com
-              </Paragraph>
-
-              <Paragraph margin="none" className="paragraph-box-top">
-                Password
+                {this.state.user.email}
               </Paragraph>
 
             </Box>

@@ -66,7 +66,7 @@ export class NavSidebar extends Component {
               <Image className="menu-img" src={imageSession}/>
               Dietas
             </Anchor>
-            <Anchor href='/dashboard/paciente/timetable'>
+            <Anchor href='/dashboard/doctor/timetable'>
               <Image className="menu-img img-margin" src={imageCalendar}/>
               Citas
             </Anchor>

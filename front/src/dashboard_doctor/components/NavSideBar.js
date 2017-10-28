@@ -42,6 +42,7 @@ export class NavSidebar extends Component {
     const imageCalendar = require('../../static/img/calendar.svg');
     const imageCancel = require('../../static/img/cancel.svg');
     const imageFeed = require('../../static/img/feed.svg');
+    const doctorFace = require('../../static/img/doctornav.svg');
 
     return (
 
@@ -50,7 +51,7 @@ export class NavSidebar extends Component {
           <Title className="title-dash"></Title>
         </Header>
         <Box className="box-profile-nav " flex='grow' justify='start'>
-          <Image className="img-title" src={imageFace} size="small"/>
+          <Image className="img-title" src={doctorFace} size="small"/>
           <h3>
             {this.state.user.full_name}
           </h3>

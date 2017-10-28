@@ -40,13 +40,14 @@ export class NavSidebar extends Component {
     const imageContent = require('../../static/img/content.svg');
     const imageCalendar = require('../../static/img/calendar.svg');
     const imageCancel = require('../../static/img/cancel.svg');
+    const person = require('../../static/img/manager.svg');
     return (
       <Sidebar className="sideBarDoctor" colorIndex='neutral-4' fixed={true} size='medium'>
         <Header pad='medium' justify='between'>
           <Title className="title-dash"></Title>
         </Header>
         <Box className="box-profile-nav " flex='grow' justify='start'>
-          <Image className="img-title" src={imageFace} size="small"/>
+          <Image className="img-title" src={person} size="small"/>
           <h3>
             {this.state.user.full_name}
           </h3>

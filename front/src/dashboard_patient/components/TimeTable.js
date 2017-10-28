@@ -15,6 +15,7 @@ import {SingleDatePicker} from 'react-dates';
 import Paragraph from 'grommet/components/Paragraph';
 import ModalGeneral from '../../general_components/ModalGeneral.js';
 import serializeForm from 'form-serialize';
+import Select from 'grommet/components/Select';
 
 BigCalendar.setLocalizer(BigCalendar.momentLocalizer(moment));
 BigCalendar.views = ['month', 'day', 'week'];
@@ -37,7 +38,8 @@ export class TimeTablePatient extends Component {
       focused_start: false,
       focused_end: false,
       numTimeTo: [now],
-      numTimeFrom: [now]
+      numTimeFrom: [now],
+      value: "none"
     };
   }
 
@@ -65,17 +67,16 @@ export class TimeTablePatient extends Component {
     s_d = s_d.toDate();
     e_d = e_d.toDate();
 
-    events.push({
-      "title": "New Date",
-      "start": s_d,
-      "end": e_d
-    });
+    events.push({"title": "New Date", "start": s_d, "end": e_d});
 
     console.log(events);
 
     this.onCloseLayer();
   }
 
+  handleChange(event) {
+     this.setState({value: event.target.value});
+   }
   render() {
     const {children} = this.props;
     const allViews = Object.keys(BigCalendar.views).map(k => BigCalendar.views[k])
@@ -98,18 +99,23 @@ export class TimeTablePatient extends Component {
     return (
       <Box className="TimeTable">
         {this.state.openLayer && (
-          <ModalGeneral  title="Agendar cita" showClosed={true} closeDialog={() => this.onCloseLayer()} handleSubmit={(e) => this.handleSubmit(e)}>
+          <ModalGeneral title="Agendar cita" showClosed={true} closeDialog={() => this.onCloseLayer()} handleSubmit={(e) => this.handleSubmit(e)}>
             <Box>
-            <SingleDatePicker {...defaultProps} id="start_date" date={this.state.start_date_opt} // momentPropTypes.momentObj or null
-                    onDateChange={(e) => this.changeOpts(e)} // PropTypes.func.isRequired
-                    focused={this.state.focused_start} // PropTypes.bool
-                    onFocusChange={({focused}) => this.setState({focused_start: focused})} // PropTypes.func.isRequired
-                  />
+            <select value={this.state.value} onChange={this.handleChange}>
+            <option value="Luis">Luis</option>
+            <option value="Lucas">Lucas</option>
+            <option value="Jerry">Jerry</option>
+            
+          </select>
+              <SingleDatePicker {...defaultProps} id="start_date" date={this.state.start_date_opt} // momentPropTypes.momentObj or null
+                onDateChange={(e) => this.changeOpts(e)} // PropTypes.func.isRequired
+                focused={this.state.focused_start} // PropTypes.bool
+                onFocusChange={({focused}) => this.setState({focused_start: focused})} // PropTypes.func.isRequired
+              />
               <TimePicker name="first_time" showSecond={false} defaultValue={now} className="xxx" onChange={this.changeOpts()} format={format} use12Hours/>
             </Box>
           </ModalGeneral>
         )}
-
 
         <h1>Calendario</h1>
         <button onClick={() => this.onOpenLayer()}>

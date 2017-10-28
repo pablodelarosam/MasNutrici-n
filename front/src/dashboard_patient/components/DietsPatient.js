@@ -39,41 +39,60 @@ export class DietsPatient extends Component {
             Desayunos
           </h2>
           <ListItem justify='between' separator='horizontal' className="table-course">
+          <Box className="patient-info" style={{}} size={{
+            width: {
+              max: "xxlarge"
+            }
+          }} direction="row">
+            <Box pad="medium" basis="1/4">
 
-            <span>
               <div className="prof-picture"></div>
-            </span>
-            <span>
+
+            </Box>
+
+            <Box pad="medium" basis="1/2">
+
               <p className="prof-name">
                 Opción 1
               </p>
               <p>
                 2 huevos con jamón 1 reb. de pan integral Jugo de frutas de temporada.
               </p>
-            </span>
-            <span className='secondary'>
 
-              <CheckBox/>
+            </Box>
 
-            </span>
+              </Box>
+
+
+
           </ListItem>
           <ListItem justify='between' separator='horizontal' className="table-course">
-            <span>
+          <Box className="patient-info" style={{}} size={{
+            width: {
+              max: "xxlarge"
+            }
+          }} direction="row">
+            <Box pad="medium" basis="1/2">
+
               <div className="prof-picture"></div>
-            </span>
-            <span>
+
+            </Box>
+
+            <Box pad="medium" basis="1/2">
+
               <p className="prof-name">
                 Opción 2
               </p>
               <p>
                 Cereal con fibra y leche ligth
               </p>
-            </span>
-            <span className='secondary'>
 
-              <CheckBox/>
+            </Box>
 
-            </span>
+              </Box>
+
+
+
           </ListItem>
         </List>
 
@@ -100,23 +119,30 @@ export class DietsPatient extends Component {
             Comida
           </h2>
           <ListItem justify='between' separator='horizontal' className="table-course">
+          <Box className="patient-info" style={{}} size={{
+            width: {
+              max: "xxlarge"
+            }
+          }} direction="row">
+            <Box pad="medium" basis="1/4">
 
-            <span>
               <div className="prof-picture"></div>
-            </span>
-            <span>
-              <p className="prof-name">
-                Opción 1
-              </p>
-              <p>
-                Carne asada acompañada de ensalada de verduras crudas o cocidas al gusto ó Pollo asado con ensalada de nopales con queso
-              </p>
-            </span>
-            <span className='secondary'>
 
-              <CheckBox/>
+            </Box>
 
-            </span>
+            <Box pad="medium" basis="1/2">
+
+            <p className="prof-name">
+              Opción 1
+            </p>
+            <p>
+              Carne asada acompañada de ensalada de verduras crudas o cocidas al gusto ó Pollo asado con ensalada de nopales con queso
+            </p>
+
+            </Box>
+
+              </Box>
+
           </ListItem>
 
         </List>
@@ -127,40 +153,58 @@ export class DietsPatient extends Component {
           </h2>
           <ListItem justify='between' separator='horizontal' className="table-course">
 
-            <span>
+          <Box className="patient-info" style={{}} size={{
+            width: {
+              max: "xxlarge"
+            }
+          }} direction="row">
+            <Box pad="medium" basis="1/2">
+
               <div className="prof-picture"></div>
-            </span>
-            <span>
-              <p className="prof-name">
-                Opción 1
-              </p>
-              <p>
-                3 reb. de papaya o melón Líquidos
-              </p>
-            </span>
-            <span className='secondary'>
 
-              <CheckBox/>
+            </Box>
 
-            </span>
+            <Box pad="medium" basis="1/2">
+
+            <p className="prof-name">
+              Opción 1
+            </p>
+            <p>
+              3 reb. de papaya o melón Líquidos
+            </p>
+
+            </Box>
+
+              </Box>
+
+
           </ListItem>
           <ListItem justify='between' separator='horizontal' className="table-course">
-            <span>
+          <Box className="patient-info" style={{}} size={{
+            width: {
+              max: "xxlarge"
+            }
+          }} direction="row">
+            <Box pad="medium" basis="1/4">
+
               <div className="prof-picture"></div>
-            </span>
-            <span>
-              <p className="prof-name">
-                Opción 2
-              </p>
-              <p>
-                Una rebanada de pan tostado con queso panela Una fruta (manzana, pera, mandarina o durazno)
-              </p>
-            </span>
-            <span className='secondary'>
 
-              <CheckBox/>
+            </Box>
 
-            </span>
+            <Box pad="medium" basis="1/2">
+
+            <p className="prof-name">
+              Opción 2
+            </p>
+            <p>
+              Una rebanada de pan tostado con queso panela Una fruta (manzana, pera, mandarina o durazno)
+            </p>
+
+            </Box>
+
+              </Box>
+
+
           </ListItem>
         </List>
 

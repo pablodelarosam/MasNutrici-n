@@ -8,5 +8,5 @@ export const UPDATED_PROFILE = "UPDATED_PROFILE";
 export const GENERAL_REQUEST = 'GENERAL_REQUEST';
 export const RECV_DATA_TIMETABLE = 'RECV_DATA_TIMETABLE';
 export const RECV_PATIENTS = 'RECV_PATIENTS';
-// export const HOST_NAME = 'http://13.56.239.221';
-export const HOST_NAME = 'http://localhost:1337';
+export const HOST_NAME = 'http://107.170.246.203:1337';
+// export const HOST_NAME = 'http://localhost:1337';

@@ -39,7 +39,7 @@ export class TimeTablePatient extends Component {
       focused_end: false,
       numTimeTo: [now],
       numTimeFrom: [now],
-      value: "none"
+      value: "Pedro"
     };
   }
 
@@ -67,7 +67,7 @@ export class TimeTablePatient extends Component {
     s_d = s_d.toDate();
     e_d = e_d.toDate();
 
-    events.push({"title": "New Date", "start": s_d, "end": e_d});
+    events.push({"title": values["pacient"], "start": s_d, "end": e_d});
 
     console.log(events);
 
@@ -77,6 +77,7 @@ export class TimeTablePatient extends Component {
   handleChange(event) {
      this.setState({value: event.target.value});
    }
+
   render() {
     const {children} = this.props;
     const allViews = Object.keys(BigCalendar.views).map(k => BigCalendar.views[k])
@@ -101,12 +102,12 @@ export class TimeTablePatient extends Component {
         {this.state.openLayer && (
           <ModalGeneral title="Agendar cita" showClosed={true} closeDialog={() => this.onCloseLayer()} handleSubmit={(e) => this.handleSubmit(e)}>
             <Box>
-            <select value={this.state.value} onChange={this.handleChange}>
-            <option value="Luis">Luis</option>
-            <option value="Lucas">Lucas</option>
-            <option value="Jerry">Jerry</option>
-            
-          </select>
+            <Select placeHolder='Pedro'
+            options={['Pedro', 'Lucas']}
+            defaultValue={this.state.value}
+            name="pacient"
+            value={this.state.value}
+            onChange={(e) => this.handleChange(e)} />
               <SingleDatePicker {...defaultProps} id="start_date" date={this.state.start_date_opt} // momentPropTypes.momentObj or null
                 onDateChange={(e) => this.changeOpts(e)} // PropTypes.func.isRequired
                 focused={this.state.focused_start} // PropTypes.bool
